@@ -1,0 +1,74 @@
+Aula02
+
+Paradigmas de programação - 
+
+    Programação procedural - Também chamada de estruturada, ela é baseada em chamadas a procedimentos(rotinas, métodos e funções),
+    geralmente escrito em uma única rotina ou função, pode ser quebrado em sub-rotinas porem sempre seguindo um único fluxo.
+
+    Programação Orientada a Objetos - É uma aproximação ao mundo real, onde trabalhamos com transformação, manipulação e utilização 
+    de objetos. Sua estrutura é como um conjunto de objetos, sendo que cada um deles tem um serviço ou alguma ação e é usado em outros
+    objetos.
+
+Classes e objetos -
+
+    Em POO, as classes estão para objetos. Por exemplo, podemos preparar vários bolos a partir de uma mesma forma, como bolo de chocolate,
+    laranja, fubá, etc. O mesmo acontece com os objetos.
+    Podemnos criar vários objetos a partir de uma mesma classe, mas, como cada bolo tem seu sabor, cada objeto terá sua própria identidade.
+
+        Classe - É uma estrutura que integra dados e comportamentos. Também representado como um conjunto de operações válidas que acessam
+        e manipulam seus respectivos valores.
+        A classe é usado para construir os objetos, ela é o projeto do objeto, fornecendo a descrição do comportamento (operações) comum e 
+        do estado (dados) destes.
+
+        Objeto - É a instância de uma classe, e tem estado (seus dados, o que o objeto sabe sobre si mesmo) e comportamento, ou seja,
+        o que o objeto faz.
+
+    É importante destacar que o comportamento do objeto é definido através da sua respectiva classe a partir de métodos, um conjunto
+    de rotinas que operam sobre os dados. Já o estado do objeto é definido por sua respectiva classe a partir de variáveis de instância,
+    que representam os dados do objeto.
+
+Os 4 pilares da orientação a Objetos -
+
+    Encapsulamento -  o encapsulamento é um recurso da orientação a objetos que permite agrupar um código e os dados por ele manipulados
+    em uma única entidade, protegendo-os de interferências externas, acesso indevido e/ou utilização/modificação inadequada por outro 
+    trecho de código definido fora do código encapsulado.Em OO, é uma boa prática tornar os atributos privados, uma vez que é 
+    responsabilidade de cada classe controlar seus atributos.
+    OBS: Para isso, algumas linguagens utilizam o conceito de palavras-chave para definir o nível de visibilidade, e Python considera que 
+    existem os tipos public e non-public. Para marcar como non-public, usam-se dois underscores (__) antes do nome do atributo ou método.
+
+    Abstração - Visa projetar as classes pensando no comportamentos e estados que queremos que os objetos que serão criados a partir
+    dela tenham. É programar usando um nível de pensamento mais abstrato.
+
+    Herança - Permite que as características e comportamentos descritos de uma superclasse possam ser herdados por sua subclasse.
+    Estas são as principais vantagens da utilização da herança:
+        Evita código duplicado.
+        Facilita a manutenção, pois há apenas um lugar para fazer alterações em caso de modificações (superclasse), sem precisar modificar 
+        as subclasses.
+        Possibilita definir um protocolo comum para um grupo de classes relacionadas.
+        Garante que todas as subclasses, tanto atuais como futuras, de uma superclasse tenham os mesmos métodos que serão herdados.
+        Permite estabelecer um “contrato” mínimo do que as subclasses – em qualquer nível – poderão fazer.
+
+    Polimorfismo - É a capacidade de um objeto poder ser referenciado de várias formas (o que não significa que o objeto pode 
+    se transformar em outro tipo).
+
+Métodos - 
+
+    Dentro das classes, é possivel definir métodos que representam as ações que os objetos criados a partir delas poderão realizar.
+    Um método recebe pelo menos u,m parâmetro: a instância da classe, representada pela palavra reservada self. Esse parâmetro 
+    permite saber a que instânciase referem os atributos. Ao declarar o método, é preciso declarar self explicitamente, mas, ao chamar 
+    o método em um objeto, self é passado automaticamente.
+
+Atributos - 
+    
+    Existem três tipos de variáveis que podem ser declaradas dentro de uma classe:
+        Atributos de classes - São atributos ligados à classe, e todas as instâncias da classe compartilham o mesmo atributo.
+        Atributos de instância - São específicos para cada instância, podendo ter valores diferentes de uma instância para outra.
+        variáveis de métodos - Existem apenas enquanto a função está sendo executada.
+
+Agregação - 
+
+    O objeto que compõe o todo tem uma parte do tipo de outro objeto e ambos podem existir separadamente.
+
+Composição - 
+
+    Se o objeto que representa o todo deixar de existir, o objeto que é uma parte relacionada a ele também deixará de existir.
