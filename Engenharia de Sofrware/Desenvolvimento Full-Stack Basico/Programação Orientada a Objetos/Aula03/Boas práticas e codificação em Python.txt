@@ -1,0 +1,130 @@
+Princípios SOLID3
+
+Single responsibility principle (SPR) – Princípio de responsabilidade única:
+
+    Seu princípio diz que uma classe não deve ter mais de um motivo para ser alterada, ou seja, uma classe dever ser especializada em
+    um único assunto e ter apenasuma responsabilidade dentro do software. Violar esse princípio pode acarretar em problemas como alto 
+    acoplamento, baixa coesão e dificuldades na implementação de testes automatizado e no reaproveitamento do código. Exemplo em 
+    código no arquivo ExemplosSOLID.
+
+Open/closed principle (OCP) – Princípio do aberto/fechado: 
+
+    Seu princípio diz que uma classe deve estar aberta para extensão, porém fechada para modificação. Quando novos comportameentos e
+    recursos precisam ser adicionados no software, devemos estender, e não alterar, o código-fonte original. Exemplo em código no 
+    arquivo ExemplosSOLID.
+
+Liskov substitution principle (LSP) – Princípio da substituição de Liskov:
+
+    Seu princípio diz que uma subclasse deve poder ser substituída pela sua superclasse. Quando o LSP é seguido, os métodos públicos
+    nas subclasses devem estar também prensentes na superclasse, mesmo que de forma abstrata. Exemplo em código no arquivo ExemplosSOLID.
+
+
+Interface segregation principle (ISP) – Princípio de segregação de interface: 
+
+    Seu princípio define que várias interfaces específicas são melhores do que uma interface genérica, ou seja, uma classe não deve
+    conhecer nem depender de métodos de que não necessite. Exemplo em código no arquivo ExemplosSOLID.
+
+Dependency inversion principle (DIP) – Princípio da inversão de dependência: 
+
+    Seu princípio define que devemos depender de abstrações, e não de implementações. Programe para uma interface, e não para uma
+    implementação. Isso permitirá desacoplar classes clientes de implementações específicas. Exemplo em código no arquivo ExemplosSOLID.
+
+Guia de Estilos
+
+    Para manter as características e os processos de linguagem, a comunidade Python conta com as PEPs - Python Enchancement Proposals.
+    Conforme descrito no PEP-1, as PEPs podem ser:
+        # de padrões - descrevem novos recursos ou implementações de Python;
+        # informacionais - problemas de design ou orientações gerais para a comunidade;
+        # de processos - processos do Python
+
+    PEP-8
+        Descreve a forma recomendada de programar em Python, seguir está PEP para criar códigos é muito importante, pois facilita a
+        padronização e o entendimento entre desenvolvedores.
+
+    PEP-20
+        Descreve o Zen do Python, uma lista de curtos pensamentos que resumem como o Python funciona, é executado pelo import this
+        (Easter egg do Python)
+
+    PEP-257
+        Trata-se de convenções de docstrings (comentários de módulos, funções, classes e métodos que se tornam a propriedade doc desses
+        elementos e apareceem quando invocamos o help deles)
+
+Layout de código
+
+    Indentação - Devem-se usar o tab pro nível de indentação, sendo os espaços a forma de identação preferida. Porém, é importante 
+    nunca misturar tabulações e espaços
+
+    Comprimento máximo de linhas - As linhas de código do programa devem ter no máximo 72 caracteres e para longos blocos de texto
+    devem ter no máximo 79 caracteres. A melhor forma de continuar linhas longas é usando a continuação implícita
+    (entre parênteses, colchetes ou chaves), também podendo utilizar uma barra invertida.
+
+    Imports - Devem ser feitos em linhas separadas, nunca na mesma linha.
+
+    Os imports dever ser sempre colocados no início do arquivo de código, logo depois quaisquer comentários ou docstrings, e antes
+    de constantes ou globais, devendo ser utilizada uma linha em branco entre cada grupo, e devendo ser agrupados seguindo a ordem:
+
+        1. Módulos da biblioteca padrão;
+        2. Módulos terceiros relacionados entre si
+        #. Aplicações locais/biblioteca específicas da aplicação
+
+    Nomenclatura:
+        Segundo o pensamento do Zen do Python é melhor explícito do que implícito. Isso significa que a clareza quanto ao que queremos
+        desenvolver em um bloco de código é muito importante, o que inclui nomear as variáveis, as funções, as classes e os pacotes
+        de forma clara e consistente.
+            _____________________________________________________________
+            |   Tipo    |   Convenção de Nomenclatura   |   Exemplos    |
+            |___________|_______________________________|_______________|
+            |           |  Use uma palavra ou palavras  |               |
+            |  Função   |  minúsculas separadas por     |  function,    |
+            |           |  sublinhados(_)               |  my_function  |
+            |___________|_______________________________|_______________|
+            |           |  Use uma letra, palavra ou    |               |
+            |  Variável |  palavras minúsculas          |  x, var,      |
+            |           |  separadas por sublinhados(_) |  my_variable  |
+            |___________|_______________________________|_______________|
+            |           |  Comece cada palavra com uma  |  Model,       |
+            |  Classe   |  letra maiúscula              |  MyClass      |
+            |___________|_______________________________|_______________|
+            |           |  Use uma palavra ou palavras  |               |
+            |  Método   |  minúsculas separadas por     | class_method, |
+            |           |  sublinhados(_)               | method        |
+            |___________|_______________________________|_______________|
+            |           |  Use uma letra, palavra ou    |               |
+            | Constante |  palavras maiúsculas          |  COSNTANT,    |
+            |           |  separadas por sublinhados(_) |  MY_CONSTANT  |
+            |___________|_______________________________|_______________|
+            |           |  Use uma palavra ou palavras  |               |
+            |  Módulo   |  curtas e minúsculas          | module.py,    |
+            |           |  separadas por sublinhados(_) | my_module.py  |
+            |___________|_______________________________|_______________|
+            |           |  Use uma palavra ou palavras  |               |
+            |           |  curtas com todos os          |               |
+            |  Pacote   |  caracteres em minúsculas,    |  package,     |
+            |           |  sem separá-las por           |  mypackage    |
+            |           |  sublinhados                  |               |
+            |___________|_______________________________|_______________|
+
+Clean code 
+
+    As boas práticas de um código limpo consistem em instruções direcionadas ao modo como escrevemos nosso código, incluindo as
+    técnicas identificadas como as melhores para realizar determinada tarefa.
+
+    Nomes significativos:
+        
+        Usar nomes que revelam seu propósito - se um nome requer um comentário, ele não revela seu propósito.
+
+        Fazer distinções significativas - o nome de uma variavel jamais deve conter a palavra "variavel", nem o nome de uma classe
+        deve conter a plavra "classe".
+
+        Utilizar nomes passíveis de busca - evite nomes de uma só letra, pois é difícil localiza-los ao longo de um texto.
+
+        Evitar fazer trocadilhos - evite usar a mesma palavra para dois propósitos.
+
+        Evitar usar abreviações - elas requerem esforço maior na hora de ler o código.
+
+        Utilizar nomes descritivos - se for necessário para que o código seja légivel, utilize nomes grandes.
+
+        Evitar números mágicos - não utilize valores constantes soltos poelo código, sem identificação do que significam.
+
+        Ao instanciar os objetos, é importante deixar claro o que cada um deles significa.
+            
