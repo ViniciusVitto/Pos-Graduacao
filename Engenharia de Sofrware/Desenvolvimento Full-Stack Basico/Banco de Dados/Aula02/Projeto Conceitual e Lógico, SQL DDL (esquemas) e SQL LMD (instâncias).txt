@@ -1,0 +1,124 @@
+Visão geral do processo envolvido no projeto de um banco de dados relacional:
+
+    Análise e levantamento de requisitos de dados e funcionais - 
+
+        Deve-se realizar um levantamento completo dos dados que serão representados e manuseados pela aplicação em
+        estudo. Conhecer os requisitos funcionais, em particular as consultas que serão feitas futuramente pelos
+        usuários, também ajuda na especificação, evitando manutenções caras em termos de tempo e complexidade de 
+        implementação.
+
+    Dependências funcionais e formas normais (modelo relacional) - 
+
+        Serão esquemas gerados para o modelo relacional, com tabelas, atributos e restrições de integridae associadas.
+        Utilizando a linguagem SQL com as sintaxes específicas de criação de tableas e atualização dos dados nelas.
+
+    Projeto conceitual - 
+
+        Nesta etapa, o foco são estritamente os dados e como se relacionam, valores que são considerados válidos e 
+        restrições de integridade que devem ser controladas pela semântica da aplicação.
+
+    Projeto lógico - 
+
+        O resultado do projeto conceitual é um esquema conceitual de dados que pode ser mapeado para diversos modelos 
+        lógicos. Ao final do projeto lógico, temos disponível um esquema lógico associado a algum modelo lógico conhecido
+        que tenha a especificação completa exigida por um modelo de dados, a saber, estrutura de organização e linguagens
+        de manuseio de dados.
+
+    Projeto físico - 
+
+        Na modelagem física associasse a eficiência, buscando refinar o esquema relacional visando melhorar desempenho nos
+        acessos e manuseios dos dados. Esse aspectos envolvem desde a criação de objetos presentes nos sistemas relacionais,
+        como as visões e os índices, até uma recisão da modelagem lógica para adequação quanto aos tempos de execução
+        esperados das consultas.
+
+Processo de modelagem conceitual
+
+    O modelo de entidades e relacionamentos (MER), é um dos mais utilizados pelos profissionais de mercado e, certamente, o 
+    processo de modelagem conceitual mais difundido. Com a popularização do POO, houve um esforço para a consolidação de 
+    métodos e modelos existentes para projeto de sistemas que resultou na Unified Modeling Language (UML).
+
+    Entidades e atributos - 
+
+        É um modelo simples, ituitivo, mas formal, que define como representar dados e relacionamentos entre estes, com regras
+        e especificações que devem ser satisfeitas para que a modelagem possa ser considerada correta.
+
+        Basicamente, temos três tipos de objetos a modelar:
+
+            -As entidades -> Trata-se de algo ou um "coisa" que pode ser inequivocamente identificado por um conjunto de 
+            propriedades ou caracteristicas em comum. São representadas por meio de quadrados ou retângulos.
+            
+            -Os relacionamentos
+
+            -Os atributos -> São as propriedades relevantes de cada instância em uma entidade. É fundamental entender que não 
+            existe entidade sem atributos.
+
+    Relacionamentos e hierarquias entre entidades
+
+        Os losangos representam os relacionamentos entre ocorrências de entidades ou, genericamente, relacionamentos entre entidades.
+        Relacionamentos são descritos adicionalmente por meio de cardinalidade mínimas e máximas.
+
+            Relacionamento NxN - 
+
+                Serve para representar casos em que podemos ter mais de uma ocorrência de uma entidade se relacionando com mais de uma 
+                ocorrência da outra entidade.
+            
+            Relacionamento 1xN - 
+
+                Permite modelar casos em que apenas uma das entidades tem múltiplas ocorrências se relacionando com apenas uma ocorrência 
+                da outra entidade
+
+            Relacionamento 1x1 - 
+
+                Representa um caso particular de um relacionamento 1xN, pois cada ocorrência de cada entidade envolvida só pode se 
+                relacionar com uma única ocorrência da outra entidade.
+
+Mapeamento MER para modelo relacional
+
+    A tabela exibe uma síntese das principais transformações entre esquemas desses dois modelos:
+                                _____________________________________________________________
+                                | Modelo de entidade e relacionamento | Modelo relacional   |
+                                |_____________________________________|_____________________|
+                                |   Entidade                          |     Tabela          |
+                                |_____________________________________|_____________________|
+                                |   Atributo de entidade              | Atributo de tabela  |
+                                |_____________________________________|_____________________|
+                                |   Atributo de multivalorado         |     Tabela          |
+                                |_____________________________________|_____________________|
+                                |   Atributo de estruturado           |     Tabela          |
+                                |_____________________________________|_____________________|
+                                |   Atributo de determinante          |   Chave primária    |
+                                |_____________________________________|_____________________|
+                                |   Domínio                           |     Domínio         |
+                                |_____________________________________|_____________________|
+                                |   Entidade fraca                    | Tabela com chave    |
+                                |                                     | primária composta   |
+                                |_____________________________________|_____________________|
+                                |                                     | Não há conceito     |
+                                |   Dependência de existência         | equivalente no      |
+                                |                                     | modelo relacional   |
+                                |_____________________________________|_____________________|
+                                |   Relacionamento                    | Chave estrangeira   |
+                                |                                     | ou tabela           |
+                                |_____________________________________|_____________________|
+                                |                                     | Chave estrangeira,  |
+                                |   Relacionamento que identifica     | que é parte da chave|
+                                |   uma entidade fraca                | primária da tabela  |
+                                |_____________________________________|_____________________|
+                                |   Relacionamento múltiplo           |     Tabela          |
+                                |_____________________________________|_____________________|
+                                |                                     | Não há conceito     |
+                                |   Papel                             | equivalente no      |
+                                |                                     | modelo relacional   |
+                                |_____________________________________|_____________________|
+                                |   Atributo de relacionamento        | Atributo de tabela  |
+                                |_____________________________________|_____________________|
+                                |   Autorrelacionamento               | Chave estrangeira   |
+                                |                                     | ou tabela           |  
+                                |_____________________________________|_____________________|
+                                |   Agregado                          | Chave estrangeira   |
+                                |                                     | ou tabela           |  
+                                |_____________________________________|_____________________|
+                                |   Generalização                     | Uma ou mais tabelas |
+                                |_____________________________________|_____________________|
+
+

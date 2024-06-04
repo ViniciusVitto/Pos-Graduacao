@@ -1,0 +1,143 @@
+Sistemas de bancos de dados
+
+    Muitas pessoas se referem aos bancos de dados como um "bando" de dados: um conjunto de dados relativamente
+    organizado e estruturado para satisfazer algumas demandas de aplicações específicas. Os bancos de dados
+    computacionais envolvem não apenas dados em si, mas também, e principalmente, os Sistemas Gerenciadores
+    de Bancos de Dados (SGBD), que permite administar, consultar e atualizar os dados com segurrança, eficácia
+    e eficiência. Podemos, assim, chamar de sistemas de bancos de dados aquelas aplicações contemplando dados 
+    e algum SGBD.
+
+Modelos de dados
+
+    Podemos definir um modelo de dados como um formalismo matemático que contém duas partes:
+
+        Estrutura - Formato de como os dados devem ser identificados, representados e abstraídos.
+
+        Manuseio - Maneira como os dados são acessados ou atualizados por meio de operações definidas sobre
+        representação estrutural.
+    
+    Considera-se também que faz parte de um modelo de dados a definição de um conjunto de restrições de integridade,
+    as quais, na prática, determinam o que pode e o que não pode fazer parte do conjunto de dados da base em questão.
+
+Modelos de dados relacional
+
+    O modelo relacional (relational data model) contempla as duas partes que compõem qualquer modelo de dados: 
+    
+        Estrutura -  no caso relações matemáticas
+        
+        Manuseio -  por meio de linguagens (por exemplo, SQL ou álgebra relacional) projetadas para estruturas relacionais.
+    
+    É importante apontar logo para uma interpretação errada que se dá ao termo “relacional” deste modelo lógico de dados. 
+    Certamente não diz respeito ao fato de que representaria os relacionamentos sobre os dados do banco, pois, na verdade,
+    todo modelo de alguma maneira especifica a forma como os dados se relacionam. Na verdade, o modelo foi assim nomeado 
+    pois sua estrutura se baseia em abstrações matemáticas chamadas de relações.
+
+    Estrutura do modelo de dados relacional 
+
+        A parte estrutural do modelo relacional é baseada no conceito matemático de relações, que tem, por sua vez, muitas 
+        semelhanças com o conceito matemático de conjunto. Como será visto, muitas das operações sobre relações são oriundas 
+        da teoria de conjuntos, e por isso mesmo o modelo é dito orientado aos conjuntos (set-oriented).
+
+    Definindo relações
+
+        Os elementos de uma relação podem ser formados por um subconjunto do produto cartesiano dos domínios de valores 
+        associados aos atributos. Cada domínio é usado com um papel específico, muitas vezes explicitado por seu nome.
+
+    Outras características de relações
+
+        As relações, assim como os conjuntos, não têm elementos repetidos. Como as linhas de uma tabela no modelo relacional 
+        não têm identificação própria, só podemos nos referir às tuplas pelos valores em seus atributos. Dadas duas tuplas, 
+        teremos valores distintos em pelo menos um dos seus atributos. Se olharmos apenas para as colunas, independentemente 
+        das tuplas, podemos ter valores repetidos. 
+        Apenas as linhas são, e devem ser, diferentes umas das outras. Os valores em cada coluna de uma linha em uma tabela 
+        são todos considerados atômicos ou indivisíveis. Isto quer dizer que, para cada atributo de cada tupla, não temos 
+        representação multivalorada.
+
+Esquemas de bancos de dados relacionais 
+
+    Estamos agora em condições de definir “banco de dados relacional”: trata-se de um conjunto de uma ou mais relações, ou 
+    tabelas, e suas restrições de integridade.
+    Um esquema relacional refere-se ao conjunto de esquemas de todas as tabelas de um banco de dados relacional. Basta uma 
+    única relação para o banco ser considerado relacional, mas, normalmente, temos várias tabelas compondo um banco de dados.
+
+    Esquemas X Instâncias
+
+        É importante diferenciar a noção de modelos de dados dos esquemas respectivos. Do ponto de vista dos modelos, um 
+        esquema é uma de suas instâncias, ou um caso particular do modelo. Assim, existe o modelo relacional, cuja estrutura 
+        é baseada em relações matemáticas ou tabelas, e existem diversos esquemas relacionais, definidos para cada aplicação 
+        distinta. 
+
+    Manuseio de dados no modelo relacional
+
+        A preocupação inicial de Ted Codd quando propôs o modelo de dados relacional dizia respeito ao uso de relações como a 
+        estrutura de representação dos dados em alto nível, sem que fosse necessário ao usuário do sistema saber como relações 
+        seriam implementadas na prática. Porém, para que se mostrassem úteis, relações teriam que ser manuseadas de tal forma 
+        que consultas e operações sobre os dados permitissem responder perguntas relevantes e significativas sobre eles.
+        O modelo relacional originalmente se baseou em duas LMD (Linguagem de Manuseio de Dados) ditas puramente relacionais: 
+        cálculo relacional e álgebra relacional. 
+
+        O acesso e manipulação de dados através da linguagem SQL é realizado de forma declarativa. Ou seja, quando realizamos 
+        uma consulta com SQL, não precisamos especificar como o gerenciador irá obter os dados desejados. De fato, precisamos 
+        apenas definir o que desejamos que seja retornado a partir da consulta.
+
+SQL: a linguagem relacional-padrão
+
+    A linguagem SQL é uma linguagem de consultas simples, com sintaxe reduzida, e que será, nesta aula, apresentada com suas 
+    cláusulas mais importantes e utilizadas na prática.
+
+    SELECT - Voltado para consultas de dados
+
+    FROM - Seleciona qual tabela ou tabelas precisam ser consultadas
+
+    Sendo assim para fazer uma consulta básica em seu banco basta realizar o seguinte comando
+
+        SELECT * FROM TABELA
+
+    Nesse comando busca todos os dados da tabela devido ao (*), caso seja necessário uma consulta específica, basta trocar o 
+    (*) pelo dado procurado, como por exemplo
+
+        SELECT dadoEspecifico FROM TABELA
+    
+    DISTINCT - Faz com que não tenha tuplas na tabela-resposta 
+
+        SELECT DISTINCT * FROM TABELA
+
+    Ordenação nos resultados de consulta
+
+        Temos os seguintes comando para a ordenação:
+
+            ORDER BY - Ordena por determinada coluna ou dado
+
+            ASC - Ordenação crescente
+
+            DESC - Ordenação decrescente
+
+            Exmplo usando ordenação:
+    
+            SELECT * FROM TABELA ORDER BY DESC
+
+    Predicados para restrição e filtro nos dados 
+
+        Para filtrar os dados é necessário ultilizar o comando:
+        
+        WHERE - Filtra os dados a partir da condição proposta
+
+        OR - Extensão da filtragem
+
+        AND - Tambem extensão da filtragem
+
+        Porem ao utilizar o AND as duas condições precisam ser verdadeiras caso contrário irá aparecer uma tabela em branco
+
+        Exemplo:
+        
+            SELECT * FROM TABELA WHERE dadoEspecifico = 'exemplo'
+
+Restrições de integridade em bancos de dados
+
+    É importante definir algumas regras que determinem quais dados podem ser aceitos para popular as tabelas e quais não podemos 
+    aceitar, de forma que o banco de dados seja efetivamente útil para os sistemas que dele fazem uso.
+    Estas regras são conhecidas como restrições de integridade (integrity constraints) e, dada a importância que têm, na prática 
+    acabam fazendo parte da definição do esquema relacional de um banco de dados particular. Para qualquer modelo de dados, podemos 
+    especificar restrições chamadas estruturais — referentes ao modelo escolhido — e as restrições específicas da aplicação, também 
+    conhecidas como regras de negócio (business rules), que complementam a especificação da semântica que se espera dos dados 
+    armazenados no banco.
