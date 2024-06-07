@@ -1,0 +1,25 @@
+Comandos SQL 
+
+    SELECT: quais colunas
+    FROM: quais tabelas
+    WHERE: quais predicados envolvendo tabelas e colunas 
+    ORDER BY: ordena na saída o resultado
+
+    SELECT  coluna
+    FROM    tabelas
+    WHERE   tabela = 'nome-dado'            // OR -> um OU outro
+    OR      tabela = 'nome-dado1'
+
+    SELECT  coluna
+    FROM    tabelas
+    WHERE   tabela = 'nome-dado'
+    UNION                                   // UNION -> Torna-se uma alternativa
+    (
+        SELECT coluna
+        FROM   tabela
+        WHERE   tabela = 'nome-dado1' 
+    )
+
+    INNER JOIN -> que ainda exige que fiquem explicitadas na consulta as colunas que serão comparadas para realizar a junção.
+    NATURAL INNER JOIN -> É uma equijunção em que a comparação de igualdade é feita sobre atributos de mesmo nome nas tabelas 
+    envolvidas. Isso acontece com tanta frequência que a simplificação sintática é bastante útil.
