@@ -1,0 +1,135 @@
+O HTML
+
+    O termo “hipertexto” é utilizado para descrever um texto que contém links para outros textos, e o HTML é uma 
+    linguagem de marcação utilizada para produzir textos (documentos) que são interpretados por navegadores. Esse 
+    tipo de documento permite estruturar a informação que será exibida para o usuário, como títulos, parágrafos 
+    e listas.
+
+        - O HTML é uma combinação de textos com códigos especiais (tags ou etiquetas).
+
+        - As tags possibilitam a estruturação do conteúdo do documento e dão instruções ao navegador sobre o que 
+        deve ser feito.
+
+        - Elas são declaradas entre parênteses angulares (‘<’ e ‘>’), e a maioria das tags tem sua correspondente 
+        de fechamento (que terá uma barra comum: <title /nomedatag >).
+
+        <title> Título da página </title> -> Identifica o início da marcação dee algo que será identificado com a 
+        tag "title", e a marcação </title> identifica o fim dessa marcação.
+
+        Um documento HTML tem sua estrutura básica definida por tags. O HTML5 (uma versão mais atualizada do HTML) 
+        é atualmente suportado por todos os navegadores, e uma página web (um documento) padrão tem a seguinte 
+        estrutura. Exemplo Codigo1.
+
+        Significados das tags do exemplo do Codigo1
+
+            -> !DOCTYPE html - A tag !DOCTYPE informa ao navegador a versão do HTML que está sendo utilizada no documento.
+            Nesse cenário, ela informa que é a versão mais recente (HTML5)
+
+            -> html - Esta tag é o elemento básico da estrutura do HTML. Assim, ela conterá todos os elementos do seu 
+            documento. Todo documento HTML deve iniciar e finalizar com essa tag.
+
+            -> head - Esta tag delimita o cabeçalho do documento. Não tem nenhum valor visível, porém é capaz de transmitir
+            ao navegador diversas informações muito úteis e essenciais a uma boa apresentação do seu documento HTML.
+
+            -> title - Esta tag define o título da sua página, o nome que aparecerá na sua aba, janela ou guia.
+
+            -> meta - Esta tag permite inserir metadados ao seu documento, no caso acima, a informação charset="UTF-8", que
+            garante a compatibilidade do código com os caracteres de padrão latino-americano.
+
+            -> body - Por fim, esta tag representa o corpo do documento. Em síntese, é nessa tag que todos os elementos
+            visíveis do seu site devem ser inseridos.
+        
+CSS
+
+    O CSS é uma linguagem de folha de estilo que é aplicada para definir como os elementos HTML devem ser apresentados em uma 
+    página da web em termos de design, layout e variações para diversos dispositivos com diferentes tamanhos de tela.
+
+    O CSS possibilita personalizar fontes, cores, margens, linhas, alturas, larguras, imagens de fundo, posicionamentos e 
+    outras tantas características a elementos de documentos codificados em HTML. De forma geral, o CSS é uma coleção de regras 
+    (cada regra é direcionada para uma tag específica ou elemento do HTML). Exemplo Codigo2
+
+        - O CSS pode ser incorporado dentro do código HTML, porém geralmente, e por boas práticas, ele é escrito em um arquivo 
+        .css, facilitando a manutenção.
+
+        - Para introduzir esse arquivo no Codigo1, é necessário adicionar a tag <link> e seus atributos dentro da <head>. 
+        Essa tag define o relacionamento entre o documento atual e um recurso externo.
+
+        -Todos os elementos HTML podem ser considerados como caixas no CSS. Para esse encapsulamento que é utilizado para design 
+        e layout, temos a expressão “modelo de caixa” (model box).
+    
+JavaScript
+
+    O JavaScript (ou apenas JS) é a linguagem de programação mais utilizada para o desenvolvimento de interfaces de usuário para a web.
+    Ele possibilita que os desenvolvedores adicionem interatividade e comportamentos dinâmicos aos seus sites, como reações de eventos 
+    do usuário, carregamento de dados de serviços da web, exibição ou ocultação de elementos em uma página, controles deslizantes de 
+    imagem, pop-ups e muito mais. O JavaScript também é o responsável por fazer a comunicação com o back-end do sistema (caso exista um).
+
+    Como uma linguagem de programação dinâmica, o JavaScript não precisa ser executado por meio de um compilador. O navegador efetivamente 
+    lê o código da mesma maneira que nós, humanos, e o interpreta em tempo real. O JavaScript é interpretado pelo navegador (que tem um 
+    interpretador JavaScript embutido).
+
+    Com isso, o navegador recebe o conteúdo da página HTML, interpreta o código JavaScript e o executa. Esse processo é feito de forma 
+    síncrona. Exemplo no Codigo3.
+
+    O código JavaScript também pode ser incorporado dentro do código HTML. Porém, da mesma forma que o CSS, recomenda-se utilizar em um 
+    arquivo .js separado e introduzi-lo com a tag <script> (usada para incluir ou referenciar um script executável) e seus atributos dentro
+    da tag <body>. Assim, facilita a legibilidade do código e possibilita a reutilização em múltiplos arquivos HTML.
+
+Frameworks e bibliotecas
+
+    Um framework JavaScript é um conjunto completo de ferramentas para a construção completa de páginas ou aplicações web.
+    Principais frameworks: Vue e Angular.
+
+    Por sua vez, bibliotecas são conjuntos de trechos de códigos pré-escritos que visam a auxiliar o desenvolvimento e que podem ser 
+    usados e reutilizados para implementar os principais recursos do JavaScript. Assim, as bibliotecas são ferramentas especializadas 
+    para necessidades específicas de codificação, não uma máquina multifuncional para preparar todo o projeto existente.
+
+    Principais bibliotecas:
+
+        - React -> Não é um framework
+        - jQuery
+
+React
+
+    O ReactJS foi desenvolvido para seguir o fluxo de dados unidirecional, geralmente conhecido como vinculação de dados unidirecional. 
+    A vinculação de dados unidirecional fornece mais controle sobre o aplicativo como um todo. Um dos objetivos do React é facilitar a 
+    conexão entre diferentes partes de uma página, havendo, assim, um funcionamento por meio de componentes.
+
+Gerenciadores de pacotes
+
+    Outro aspecto importante do front-end são as tecnologias responsáveis pelo gerenciamento e execução desses pacotes e dependências. 
+    Elas permitem que você utilize pacotes e dependências existentes em um projeto, trazendo maior facilidade ao desenvolvimento, assim 
+    como o uso do React, que vem apenas com o necessário, e, dependendo da necessidade, novas bibliotecas precisam ser instaladas.
+
+    Os dois principais gerenciadores de pacotes Javascript são o NPM e o Yarn. Ambos utilizam um arquivo chamado package.json, no qual
+    são descritos os pacotes e as dependências necessárias para o projeto, com as suas versões.
+
+    Uma vantagem do uso do NPM é o fato de ele já vir instalado automaticamente com o Node.js, o que facilita muito sua utilização.
+
+    O Node.js é um ambiente de tempo de execução JavaScript open-source e multiplataforma. Por meio dele é possível desenvolver pequenas 
+    e grandes aplicações. Atualmente, muitas das ferramentas de front-end e back-end são baseadas em Node.
+
+Bibliotecas de componentes
+
+    As bibliotecas de componentes são coleções de componentes que podem ser usados e modificados para montar uma aplicação. Esses 
+    componentes já têm um estilo visual próprio, mas é possível personalizá-los para atender às necessidades do projeto. As duas
+    bibliotecas mais populares para uso em um projeto React. 
+
+        Material UI - Uma das bibliotecas mais utilizadas em conjunto com React hoje em dia. Fornece um conjunto de componentes, bem
+        como diretrizes sobre o design e o layout do seu aplicativo, de acordo com o Google.
+
+        Bootstrap - É uma biblioteca open-source para construir sites responsivos e aplicativos da web. O framework Bootstrap é 
+        construido principalemente em CSS, mas também tem alguns modelos baseados em HTML e suporte de componentes JavaScript,
+        principalmente jQuery.
+    
+    O Bootstrap e o Material UI têm ajudado os desenvolvedores a construírem interfaces há anos, e, como ambos são gigantes na indústria,
+    há sempre a questão de qual é o melhor.
+
+Front-end e a inteligência artificial
+
+    O sistema IA GPT-3 é uma inteligência artificial especializada na produção de texto desenvolvida pela OpenAI que se baseia em técnicas 
+    de aprendizado profundo para conseguir produzir conteúdo a partir de instruções mínimas. Esse sistema tem a capacidade de, a partir de
+    textos com alguns requisitos básicos de layout, gerar código com estrutura semelhante ao JSX do React e estilos com ligeira fidelidade 
+    ao que foi pedido.
+
+    

@@ -1,0 +1,186 @@
+O início da web e seus desafios
+
+    É difícil separar a web da internet, ambas são tão interligadas que até esquecemos que são diferentes e se complementam.
+
+    A internet foi criada em 1969, pela Darpa, a Agência de Projetos de Pesquisa Avançada de Defesa dos Estados Unidos. Sendo 
+    assim, tinha inicialmente um propósito mais voltado para a área militar. 
+
+    O projeto que definiu a web que conhecemos atualmente começou em 1990, na Organização Europeia para a Pesquisa Nuclear (CERN).
+    À época, seu nome era WorldWideWeb, hoje apenas WWW (o famoso www no início da maioria das páginas web). O pai do projeto foi 
+    o britânico Tim Bernes-Lee, que não só criou a web como também pavimentou o caminho para sua evolução. Mais algumas de suas 
+    suas criações:
+
+        1- Criou a linguagem que deveria ser utilizada para a escrita de documentos em Hipertextos, o HTML.
+        2- Criou a sintaxe de como documentos HTMLs e outros recrusos deveriam ser identificados na Web via URI.
+        3- Implementou como visualizar os recrusos disponibilidados na web com o primeiro browser.
+        4- Implementou como editar e criar novos conteúdos com o primeiro editor HTML.
+        5- Criou o protocolo de transferência de hipertextos, o HTTP.
+        6- Criou o primeiro servidor Web.
+
+    Após a criação da web, o número de usuários da internet cresceu exponencialmente, saindo de 2,6 milhões em 1990 e ultrapassando 
+    ~44,4 milhões em 1995 (MASSE, 2011).
+
+    Para contornar esse cenário, em 1993, Roy Fielding, cofundador do Apache HTTP Server Project, propôs um caminho para a continuidade 
+    da expansão da web. Sua proposta era que a escalabilidade da web fosse governada por um conjunto de key constraints (restrições/
+    limitações-chave). Segundo ele, a continuidade da expansão seria possível se cada uma dessas restrições fosse atendida de forma igual.
+    Fielding as categorizou em seis grupos:
+
+    Cliente-servidor
+
+        Essa restrição é relativa à separação de responsabilidades na web entre aplicações cliente e servidor. Elas têm responsabilidades 
+        diferentes, mas complementares. Além disso, podem ser implementadas e publicadas separadamente, independentemente das tecnologias
+        utilizadas em seu desenvolvimento, desde que existam interfaces uniformes de comunicação entre elas. Portanto, não importam a 
+        linguagem, a tecnologia ou o comportamento interno, desde que haja uma forma conhecida de comunicação.
+
+    Uniformidade de interfaces
+
+        A comunicação entre aplicações depende da uniformidade de suas interfaces, ou seja, a forma de comunicação deve ser conhecida entre
+        as partes. Esse ponto é tão crucial que vários padrões foram e ainda são definidos para auxiliar essa uniformização. Fielding 
+        destaca quatro pontos que devem ser observados:
+
+            1- Indentificação de recursos -  Todo e qualquer conteúdo disponibilidado na web é definido como um recurso devendo ter um 
+            identificador único.
+
+            2- Manipulação de recrusos via representações - O objetivo é manipular sempre a representação, nunca o recurso em si.
+
+            3- Uso de mensagens autodescritivas - A informação de estado sobre a requisição de um recurso deve ser sempre dada na resposta
+            ao cliente.
+
+            4- Hipermídia como motor de estados da aplicação - A representação do estado atual de um recurso inclui os links aos recursos
+            relacionados. Isso é, o cliente não necessita conhecer todos os recursos disponíveis de uma aplicação, apenas o URL inicial, 
+            e a partir disso acesse todos os outros recursos disponiveis no menu inicial.
+
+    Sistemas em camadas
+
+        Essa restrição de arquitetura da web existe para permitir que serviços intermediários possam ser criados para atuar entre o cliente
+        e o servidor sem impactar a experiência do cliente. O sistema intermediário é transparente para a aplicação cliente.
+
+    Cache
+
+        Esse é um dos pontos mais importantes da arquitetura web. O objetivo dessa restrição é exigir da aplicação servidor que declare se 
+        o dado enviado em uma resposta a uma requisição é “cacheável”, ou seja, se pode ser armazenado em memória para evitar que outra 
+        requisição que o peça seja feita em curto prazo de tempo.
+
+    Stateless (ausência de estado)
+
+        Essa restrição de arquitetura determina que um servidor web não necessita memorizar os estados da aplicação cliente. Como resultado, 
+        o cliente deve incluir toda informação de contexto que possa ser considerada relevante na requisição, para qualquer iteração com o 
+        servidor. Livre dessa preocupação, um servidor pode atender a diferentes clientes de forma ágil.
+
+    Code-on-demand
+
+        Essa restrição de arquitetura da web permite que servidores possam enviar pequenos trechos executáveis de código, como scripts e 
+        plug-ins, para clientes. O objetivo é permitir que a aplicação servidora possa oferecer um meio para a aplicação cliente 
+        interpretar um dado enviado. Com isso, o código enviado habilitaria o cliente a interpretar o dado enviado pelo servidor.
+
+O protocolo HTTP
+
+    O protocolo HTTP é um dos mais adotados no desenvolvimento de sistemas web. Um de seus benefícios é a facilidade de aprendizado. 
+    Para fazer uma requisição em HTTP a aplicação cliente precisa informar:
+
+        1- URL - É um URI com o endereço de um recurso na internet, que pode fazer referência tanto a uma página HTML como a um áudio,
+        vídeo ou imagem.
+
+        2- Método - Informa ao servidor o tipo de ação que o cliente quer que este tome. São cinco possíveis métodos, sendo os mais comuns:
+
+            GET -> Para solicitar o retorno de um recurso;
+
+            POST -> Para solicitar a criação de um recurso;
+
+            PUT -> Para solicitar a edição ou atualização de um recurso;
+
+            DELETE -> Para solicitar que seja deletado um recurso.
+        
+        3- Cabeçalho - Provê uma lista de metainformações sobre a requisição. Um exemplo de metadado informado no cabeçalho é o user-agent,
+        que ajuda o servidor a identificar o tipo de browser ou dispositivo que o cliente está usando para fazer a requisição. Com essa
+        informação, o servidor pode decidir como será construída a resposta para oferecer ao cliente a melhor experiência possivel.
+
+        4 - Corpo da requisição - Contém dados que o cliente quer enviar para o servidor. Um detalhe importante sobre esse campo é que o 
+        cliente tem total controle sobre o conteúdo a ser enviado, diferentemente dos outros campos, que têm sua sintaxe bem definida.
+
+    Depois que o servidor receber a requisição, irá tentar fazer o que foi solicitado e retornar uma resposta. Essa resposta terá uma 
+    estrutura similar à da requisição, mas, em vez do URL e do método, informará o status code, é um valor numérico que representa uma 
+    mensagem autodescritiva que informa o estado final da execução do que foi solicitado.
+
+                                _______________________________________________________________
+                                |    Faixa de códigos   |   Classe      |     Exemplo         |
+                                |_______________________|_______________|_____________________|
+                                |       100-199         |               |  102 Processing.    |
+                                |                       | Informacional | O servidor recebeu  |
+                                |                       |               | a requisição e está |
+                                |                       |               | processando.        |
+                                |_______________________|_______________|_____________________|
+                                |       200-299         |               |  200 OK.            |
+                                |                       | Sucesso       | A reposta foi       |
+                                |                       |               | reetornada com      |
+                                |                       |               | sucesso.            |
+                                |_______________________|_______________|_____________________|
+                                |       300-399         |               |  302 Found.         |
+                                |                       | Redirecionando| O URL solicitado    |
+                                |                       |               | foi alterado        |
+                                |                       |               | temporariamente.    |
+                                |_______________________|_______________|_____________________|
+                                |                       |               |  400 Bad Request.   |
+                                |                       |               | O servidor não pode |
+                                |                       |               | retornar uma        |
+                                |       400-499         | Erro na       | resposta válida,    |
+                                |                       | resposta      | geralmente devido a |
+                                |                       |               | um problema de      |
+                                |                       |               | autenticação        |
+                                |_______________________|_______________|_____________________|
+                                |                       |               | 500 Internal Server |
+                                |                       |               | Error.              |
+                                |       500-599         | Erro de       | O servidor          |
+                                |                       | servidor      | encontrou um        |
+                                |                       |               | problema e não sabe |
+                                |                       |               | como proceder.      |
+                                |_______________________|_______________|_____________________|
+
+    O cabeçalho também é alterado na resposta do servidor, passando informações relevantes para a construção da representação da resposta.
+
+        Requisição                                      Resposta
+        _____________                                   _______________
+        |   URL     | - http://exemplo.com/item         | Status code | - 200
+        |___________|                                   |_____________|
+        | Método    | - GET                             | Cabeçalho   | - Content-type: text/html
+        |___________|                                   |_____________|
+        | Cabeçalho | - User-agent: Firefox             |             |
+        |___________|                                   |   Corpo     | - HTML
+        |           |                                   |             |
+        |   Corpo   | - Data                            |_____________|
+        |___________|
+
+Padrões de arquitetura em sistemas web
+
+    Um sistema web é um software e, sendo assim, sua arquitetura deve ser bem planejada para facilitar seu desenvolvimento, manutenção 
+    e evolução. A importância de uma boa arquitetura é fácil de justificar, pois define a base para o desenvolvimento da aplicação, 
+    influenciando diretamente diferentes aspectos do sistema, como mostrado por Biehl (2011).
+
+    Design - Refere-se a como o sistema vai se apresentar esteticamente ao usuário.
+    Monetização - A depender do tipo de sistema, a arquitetura poderá ser determinante sobre a forma de cobrança por serviços.
+    Confiabilidade - Refere-se à forma como serão garantidas a consistência e a disponibilidade dos serviços oferecidos pelo sistema.
+    Escalabilidade - Essencial para garantir a expansão do sistema, refere-se a como garantir que, em cenários de maior procura, 
+                     este seja capaz de escalar, evitando afetar a experiência e a confiabilidade do cliente.
+    Segurança - Refere-se a como será feita a segurança dos usuários e dados contra potenciais falhas e tentativas de roubo de dados.
+
+    O projeto da arquitetura deve ser guiado com base nos objetivos esperados para a aplicação.Como a importância de cada um desses 
+    aspectos pode variar com o projeto, a arquitetura do sistema deve ser aderente a seus objetivos. Com isso, não há um padrão de 
+    arquitetura, mas vários, e a escolha vai depender das necessidades e objetivos do sistema. 
+
+    Nessa proposta de arquitetura, duas aplicações do lado do servidor, em duas camadas diferentes, tratarão de responsabilidades 
+    específicas: uma servirá a apresentação (front-end) e a outra fará a execução de lógicas de negócio e o envio de dados.
+
+    Essa simples separação de responsabilidades pode ser suficiente para a construção de um sistema web escalável. A persistência e 
+    a leitura de dados em banco geralmente têm um custo elevado de tempo, pelas consultas realizadas. Por outro lado, a construção 
+    da representação, da página final que será respondida ao browser, tem, geralmente, um custo bem menor de tempo e processamento.
+
+Padrão MVC
+
+    Uma preocupação recorrente no projeto de arquitetura de um sistema web é a separação de responsabilidades e a uniformização das 
+    interfaces. Nesse sentido, o modelo visualização e controlador (MVC – model-view-controller) é um padrão de projeto de 
+    arquitetura de software muito aderente ao desenvolvimento web.
+
+    Em termos de flexibilidade, não importa de onde o conteúdo vem ou como é enviado, mas, sim, o modelo do dado, como ele é representado.
+     Sabendo como é a estrutura do dado, o conteúdo pode ser transformado em uma representação (ou visualização), de acordo com o 
+     mecanismo de controle (o controlador) encarregado de selecionar o dado, definir o modelo e escolher a melhor visualização 
+     (SHKLAR; ROSEN, 2009).
