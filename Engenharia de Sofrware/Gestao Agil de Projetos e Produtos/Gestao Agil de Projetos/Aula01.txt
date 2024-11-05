@@ -1,0 +1,83 @@
+BizDev, DevOps e experimentação contínua
+
+    As práticas de BizDev, DevOps e experimentação contínua são os elos entre a estratégia de negócio, o desenvolvimento ee a operação.
+
+                            BizDev                    DevOps
+    Estratégia de negócio  <------> Desenvolvimento  <------>  Operação  
+                ↑                                                  |                                                
+                ----------------------------------------------------
+                            Experimentação contínua
+
+Manifesto Ágil e princípios ágeis
+
+    O Manifesto Ágil é uma declaração de valores e princípios essenciais para o desenvolvimento de software. Sendo os quatro valores
+    fundamentais do Manifesto Ágil
+
+        Individuos e interações     Software em Funcionamento   Colaboração com o cliente   Responder a mudanças
+          mais que processos e        mais que documentação       mais que negociação         mais que seguir
+              ferramentas.                 abrangente.                de contratos.              um plano.
+
+Ciclo de vida: do modelo cascata ao ciclo dee vida associado ao Scrum
+
+    Um processo de engenharia de software tem como objetivo garantir a produção de software de alta qualidade e de acordo com as 
+    necessidades de seus usuários finais, com um cronograma e custo previsível.
+
+    Modelo cascata
+
+        O modelo cascata assume a execução sequencial das atividades e se mostra mais adequando em projetos pequenos. Devido a realizar
+        toda a especificação de uma vez só e passar para a atividade seguinte.
+
+            Requisitos -------
+                             ↓
+                          Projetos -------
+                                         ↓
+                                    Implementação e
+                                    teste unitario  -------
+                                                          ↓
+                                                    Teste de integração
+                                                        de sistema       -------
+                                                                               ↓
+                                                                            Operação
+
+    Modelo incremental
+
+        O modelo incremental apresenta uma alternativa ao cascata. Nesse modelo, os requisitos são segmentados em uma série de
+        increementos. O processo se repete até que um produto completo seja produzido.
+
+            Requisitos -------
+                ↑             ↓
+                |          Projetos -------
+                |                         ↓
+                |                    Implementação e
+                |                    teste unitario  -------
+                |                                          ↓
+                |                                    Teste de integração
+                |                                        de sistema       -------
+                |                                                               ↓
+                |                                                            Operação
+                |                                                               |
+                ----------------------------------------------------------------
+
+    Modelo evolutivo
+
+        No modelo evolutivo, versões parciais são desenvolvidas, atendendo aos requisitos conhecidos inicialmente. A primeira
+        veersão é usada para refinar os requisitos para uma segunda versão e assim por diante.
+
+Ciclo de vida associado ao Scrum
+
+    O ciclo de vida associado ao Scrum é o mais utilizado atualmente. Uma diferença do ciclo de vida associado ao Scrum é que ele 
+    utiliza tempo fixo (sprints), em vez de escopo fixo, para determinar seus incrementos ou evoluções. Cada sprint corresponde a 
+    uma iteração que entrega incrementos e/ou evoluções de um software, conforme prioridade planejada para agregar valor ao negócio.
+
+    Durante o sprint, ocorrem breves reuniões diárias, em que cada participante fala sobre o progresso conseguido, o trabalho a ser 
+    realizado e se há algum impedimento para seguir avançando.
+
+    Na gestão ágil de projetos, normalmente não temos a figura de um gerente de projetos. O Scrum é facilitado pelo Scrum master, 
+    que tem como função primária conduzir as cerimônias do Scrum e remover qualquer impedimento à habilidade de uma equipe de entregar 
+    o objetivo do sprint. 
+
+    O papel do Scrum master
+
+        O Scrum master é um dos três papéis envolvidos na equipe Scrum. Os outros dois são o product owner e a equipe de desenvolvimento. 
+        Enquanto o product owner foca na construção do produto certo e a equipe de desenvolvimento foca em construir o produto do jeito 
+        certo, o Scrum master foca em ajudar no correto entendimento e na adoção dos valores, princípios e práticas do Scrum.

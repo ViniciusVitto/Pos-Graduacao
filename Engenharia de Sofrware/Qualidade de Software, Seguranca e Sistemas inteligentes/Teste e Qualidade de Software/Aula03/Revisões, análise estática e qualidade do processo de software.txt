@@ -1,0 +1,121 @@
+Revisão de software
+
+    Revisão de software envolve a leitura de um artefato de software visando a assegurar que ele está corretamente construído, cumpre 
+    sua especificação e atende às necessidades de seus usuários. O objetivo é realizar a validação (quando envolve o cliente) e a 
+    verificação estática de artefatos de software em busca de defeitos. Diferentemente do teste de software, a revisão não envolve a 
+    execução do software. 
+
+    Na prática, muitas organizações realizam revisões de software, mas acabam as realizando de forma pouco sistematizada, e o potencial 
+    desse método raramente é explorado. Uma revisão bem-feita encontra em torno de 60% dos defeitos no início do processo, quando a 
+    correção desses defeitos é mais barata (Boehm; Basili, 2001). Assim, além de aumentarem a qualidade do produto, as revisões reduzem 
+    também o esforço e o custo do desenvolvimento de software, implicando o aumento da produtividade.
+
+Inspeção de software
+
+    A inspeção de software é um tipo particular de revisão que tem um processo bem definido, introduzido por Mike Fagan na IBM, que 
+    definiu o processo e mostrou benefícios de sua aplicação para a busca por defeitos desde as fases iniciais do desenvolvimento.
+
+    O maior benefício, sem dúvida, se refere a encontrar em média 60% dos defeitos envolvendo um esforço de apenas 5 a 10% do esforço 
+    total do desenvolvimento (Boehm; Basili, 2001). De fato, inspeções bem conduzidas são eficazes e apresentam baixo custo devido ao 
+    fato de o revisor não precisar investir muito tempo ou mesmo não demandar ferramentas sofisticadas para realizá-las. Não é à toa que 
+    a inspeção de software é apontada em muitas análises como a prática de maior retorno de investimento da engenharia de software 
+    (Rico, 2004).
+
+Walkthroughs
+
+    Os walkthroughs são uma alternativa com um processo menos rigoroso do que o de inspeções de software. Em um walkthrough, os 
+    participantes são diretamente convocados para uma reunião em que são guiados através dos artefatos a serem revisados pelo líder da 
+    sessão, que eventualmente é o próprio autor. Durante essa reunião, devem interromper a apresentação caso encontrem defeitos.
+
+    Os walkthroughs têm custo aproximadamente igual ao de inspeções (embora não tenham a fase de preparação individual, as reuniões tendem 
+    a ser mais longas), mas seus resultados são inferiores. Muitas vezes, condições de entrada e saída e decisões são pressupostas pelo 
+    líder, que segue sua linha de raciocínio durante a apresentação, e defeitos podem passar despercebidos. Outra diferença é que os 
+    walkthroughs podem ser utilizados também para atividades de brainstorming, para explorar alternativas de projeto e resolução de 
+    problemas, enquanto as inspeções são mais focadas em encontrar defeitos.
+
+Revisão de software em contextos ágeis
+
+    A revisão se faz presente também em contextos ágeis. Basta lembrar que a inspeção é um dos pilares do Scrum, que é o método ágil de 
+    gestão mais utilizado. A orientação do Scrum é que a equipe deve, frequentemente, “inspecionar” os artefatos Scrum para detectar 
+    variações. Essa “inspeção” dos artefatos ocorre tanto ao longo das cerimônias do Scrum quanto em atividades como reuniões para o 
+    refinamento do backlog ou de revisão de código.
+
+Revisões de código modernas e análise estática
+
+    Revisões de código modernas
+
+        Revisões de código modernas desempenham um importante papel no controle da qualidade de software. Elas permitem que defeitos que 
+        o desenvolvedor deixou passar durante o desenvolvimento possam ser corrigidos antes que passem para o repositório de código 
+        compartilhado. Essencialmente, revisores refletem sobre a qualidade do código de um desenvolvedor, referente a pequenas mudanças 
+        no sistema, antes que essas mudanças sejam integradas no repositório de código.
+
+        De fato, as revisões de código modernas permitem identificar não somente defeitos, como também vulnerabilidades de segurança e 
+        problemas estruturais no código. Além disso, tendem a tornar o código mais simples de ser mantido e promovem a transferência de 
+        conhecimento na equipe de desenvolvimento.
+
+    Análise estática
+
+        Análise estática é o processo de analisar automaticamente um código com base na sua estrutura, sem envolver sua execução, ou seja, 
+        de forma estática.
+
+        Ferramentas de análise estática são comumente chamadas de linters. Essas ferramentas em geral são capazes de verificar se guias de 
+        estilo estão sendo seguidos, encontrar determinados padrões de defeitos e analisar aspectos de fluxo de controle e fluxo de dados 
+        dos programas. Em geral, os linters permitem criar regras de análise estática customizadas, mas essa criação tende a ser não 
+        trivial e é pouco utilizada na prática.
+
+        Os linters mais usados no mercado no contexto do Python são o Flake8 e o Pylint. Ambos estão disponíveis como plug-ins (ou 
+        extensões) para as principais IDEs que suportam Python (por exemplo, o VS Code ou o PyCharm) e verificam o guia de estilos PEP-8, 
+        padrões de defeitos e aspectos de fluxo de controle e fluxo de dados dos programas, além de outras opções. Embora haja alguma 
+        sobreposição, não há problema em combinar ferramentas de análise estática.
+
+Qualidade do processo de software
+
+    Conceitos básicos de maturidade de processos
+
+        Em desenvolvimento de software, é comum se falar em maturidade do processo. Para entender esse conceito, vejamos algumas 
+        características e consequências típicas de um processo imaturo e um processo maduro:
+
+            - Processo imaturo: 
+
+                *Características
+                    1. Improvisado (ad-hoc)
+                    2. Fortemente dependente dos profissionais 
+                    3. Indisciplinado
+
+                *Consequências (Exemplos)
+                    1. Baixa produtividade
+                    2. Qualidade de difícil previsão
+                    3. Altos custos com retrabalho e manutenção
+
+            - Processo maduro:
+
+                *Características
+                    1. Processo definido e conhecido por todos
+                    2. Auditagem da fidelidade ao processo
+                    3. Medidas do produto e do processo
+
+                *Consequências(Exemplos)
+                    1. Papéis e responsabilidades claramente definidos
+                    2. Acompanhamento da qualidade do produto e da satisfação do cliente
+                    3. Expectativas para custos, cronograma e qualidade do produto são mais prováveis de serem alcançadas
+
+Modelo de referência para software (MPS-SW)
+
+    O programa nacional MPS.BR é coordenado pela Softex e contempla três modelos de referência: o MPS-SW, que é um modelo de referência 
+    para software; o MPS-SV, que é um modelo de referência para serviços; e o MPS-RH, que é um modelo de referência para recursos humanos. 
+    Como o nome indica, o modelo relacionado com engenharia de software e a nossa disciplina é o MPS-SW, que é também o primeiro dos três
+    modelos e o mais amplamente disseminado.
+
+    O MPS-SW contempla boas práticas da engenharia de software, organizadas em processos. A figura a seguir, adaptada do Guia Geral MPS 
+    para Software (Softex, 2023), apresenta os processos de projeto e os processos organizacionais desse modelo. A descrição de cada um 
+    dos processos no MPS-SW contempla a declaração do seu propósito e de resultados esperados de sua execução.
+
+    De maneira geral, é possível observar que os processos de projeto contemplam processos mais voltados para a gestão e a engenharia do 
+    software, enquanto os processos organizacionais podem ser vistos como processos da organização de apoio para o bom funcionamento dos 
+    projetos.
+
+    Internacionalmente, o principal modelo de referência é o Capability Maturity Model Integration (CMMI, 2018). O CMMI teve a sua origem 
+    no modelo SW-CMM (Software Capability Maturity Model) de 1984 e suas posteriores evoluções. Em sua versão atual, o CMMI representa um 
+    modelo integrado que permite às organizações colocarem o foco nas áreas que considerarem mais relevantes, criando sua visão do modelo. 
+    No entanto, ele pré-define quatro visões do modelo: CMMI Desenvolvimento (CMMI-DEV), CMMI Serviços (CMMI-SVC), CMMI Gerência de 
+    Fornecedores (CMMI-SPM) e CMMI Gerência de Pessoas (CMMI-PPL).

@@ -1,0 +1,130 @@
+Testes automatizados
+
+    O teste de software consiste no processo de executar um software com o objetivo de revelar a presença de falhas. Para executar 
+    um programa ou função, precisamos pensar em quais são as possíveis entradas e saídas desse programa ou função.
+
+    A ideia de implementar testes de maneira automatizada, criando programas que testam programas, pode ser atribuída a Kent Beck. 
+    Primeiramente, ele desenvolveu uma ferramenta de teste automatizado para Smalltalk chamada SUnit. No entanto, a versão da ideia 
+    que ficou mais popular foi a implementada para a linguagem Java, o JUnit, no final dos anos de 1990. De acordo com Martin Fowler, 
+    um dos primeiros a adotar a prática do teste automatizado, o JUnit nasceu em um voo de Zurique para Atlanta. Kent Beck voava com 
+    Erich Gamma – que conhecia melhor a linguagem Java – para participar da conferência OOPSLA 1997, e, ao longo do voo, desenvolveram 
+    a primeira versão do JUnit.
+
+    Ao longo dos anos, várias ferramentas de teste automatizado foram desenvolvidas para a linguagem de programação Python. Essas 
+    ferramentas auxiliam os desenvolvedores a criar, executar e gerenciar testes automatizados de maneira eficaz. Vamos conhecer algumas 
+    das principais ferramentas disponíveis.
+
+    Pytest
+
+        O pytest é uma das ferramentas mais populares para escrever e executar testes automatizados em Python. Ele oferece uma sintaxe 
+        simples e clara para a criação de testes e dá apoio a uma ampla gama de tipos de testes, incluindo testes unitários, de integração 
+        e de aceitação. Algumas características notáveis do pytest incluem:
+
+            - Descoberta automática de testes: O pytest pode descobrir automaticamente casos de teste dentro do seu código, tornando o 
+            processo de escrita e organização dos testes mais simples.
+
+            - Assert expressivo: O uso de assertivas (assertions) em teste é direto e expressivo, tornando mais facíl entender o que 
+            está sendo testado e qual é o resultado esperado.
+
+            - Plugins e extensibilidade: O pytest oferece uma ampla gama de plugins que permitem estender sua funcionalidade de várias 
+            maneiras, como relatórios detalhados, integração com ferramentas de cobertura de código, etc.
+    
+    Unittest
+
+        O unittest é um framework de teste embutido na biblioteca padrão do Python. Ele fornece uma estrutura para escrever testes e 
+        agrupá-los em classes de teste. Alguns recursos do unittest incluem:
+
+            - Organização em classes: Os testes são organizados em classes, permitindo agrupar testes relacionados em um único local.
+
+            - Métodos de teste padrão: Os métodos de teste começam com "test_" e são automaticamente detectados pelo unittest como 
+            casos de teste.
+
+            - Asserções integradas: O unittest inclui um conjunto de métodos de asserção embutidos, permitindo verificar facilmente as
+            condições esperadas nos testes.
+
+    Nose2
+
+        O nose2, frequentemente referido como nose, é outro framework popular de teste automatizado para Python. Embora não seja mais 
+        mantido ativamente, muitos desenvolvedores ainda o utilizam. Algumas características do nose2 incluem:
+
+            - Descoberta automática: Semelhante ao pytest, o nose2 oferece descoberta automática de teste, reduzindo a necessidade de 
+            configuração manual.
+
+            - Extensibilidade: O nose2 é altamente extensível por meio de plugins, permitindo personalizar a execução dos testes e a 
+            geração de relatórios.
+
+            - Suporte a plugins do unittest: O nose2 suporta a maioria dos plugins ee casos de teste do unittest, facilitando a transição
+            de projetos existentes.
+    
+Tipos e granularidades de teste
+    
+    Quando realizamos a avaliação de um software completo, temos a capacidade de focar em diferentes níveis de teste. Particularmente, 
+    podemos optar por analisar somente uma porção específica do sistema e também precisamos tomar a decisão de incorporar ou não a 
+    execução de algum serviço ou componente externo no teste, como, por exemplo, um banco de dados ou um sistema de envio de e-mails.
+
+    Na prática, é comum abordar os testes que envolvem qualquer sistema externo como testes de integração. Por sua vez, os testes que 
+    não demandam qualquer integração com sistemas externos e concentram-se em uma parte mais específica do sistema sob teste são 
+    classificados como testes de unidade.
+
+    Outra categoria de teste automatizado é o teste ponta a ponta (end-to-end). Em termos gerais, o teste ponta a ponta envolve a execução 
+    de uma funcionalidade do sistema desde a interface gráfica com o usuário até as suas partes mais internas – por exemplo, no contexto 
+    de uma aplicação web, isso incluiria o back-end – e os serviços utilizados por essas partes internas, como o banco de dados. Ou seja, 
+    trata-se da automatização dos testes de sistema.
+
+Tipos de teste
+
+    Em uma arquitetura com camadas concêntricas como a arquitetura limpa, em geral, no centro da arquitetura teremos camadas mais focadas
+    nas regras de negócio do domínio da aplicação. Os testes realizados para as entidades de domínio podem ser testes de unidade bem 
+    focados nas regras de negócio mais essenciais do sistema. 
+
+    Pensando em uma API web, podemos também testar o fluxo que acontece quando um endpoint é chamado a partir de fora da API. Na prática, 
+    esses testes podem ser de integração e simular uma requisição de fato acontecendo na API. Se testamos a maior parte da lógica de 
+    negócios nos casos de uso e no domínio, não precisamos criar muitos testes de integração aqui; podemos, por exemplo, criar somente 
+    testes que realizem caminhos de sucesso. Esse tipo de teste que simula uma requisição na API é comumente chamado de teste de endpoint. 
+
+Dublês de teste
+
+    Quando realizamos testes de unidade, é possível que a porção de código que desejamos avaliar tenha dependências de serviços externos, 
+    como um banco de dados. Nesses casos, podemos optar por simular essas dependências para manter o teste como um teste de unidade. O 
+    objetivo é focar exclusivamente na lógica do código em avaliação, sem incorporar o uso de dependências externas. Para isso, utilizamos
+    dublês de teste, que atuam como substitutos para uma ou mais dependências externas.
+
+    Tipos de dublês de teste
+
+        - Stubs: São dublês que não contêm lógica, simplismente retornando valores predefinidos.
+
+        - Mocks: são similiares aos stubs, mas geralmente simulam algum comportamento de maneira superficial.
+
+        - Objetivos falsos: São implementações simplificadas que não seriam usadas em produção.
+
+Teste estrutural e de mutação
+
+    O teste estrutural, também conhecido como teste de caixa branca, concentra-se na análise das estruturas internas do código-fonte. 
+    Diferentemente do teste funcional, que avalia a aplicação a partir de uma perspectiva externa, o teste estrutural visa a identificar 
+    possíveis falhas a partir do próprio código. Essa abordagem nos permite compreender a lógica subjacente do código e garante uma 
+    cobertura abrangente das diversas camadas estruturais, proporcionando maior confiabilidade e qualidade ao software.
+
+    A técnica de teste estrutural é predominantemente utilizada para avaliar conjuntos de testes automatizados. Especificamente, almejamos 
+    avaliar a extensão em que nossos testes cobrem partes cruciais do código. Diversos critérios de teste estrutural existem, porém os mais
+    empregados baseiam-se na cobertura de todos os comandos e ramificações do programa.
+
+    O teste de mutação é outra técnica poderosa que complementa as práticas tradicionais de teste. Ele envolve a criação de mutações 
+    deliberadas no código-fonte, simulando defeitos específicos. Essas mutações introduzem falhas artificiais no software, e então os 
+    testes são executados para verificar se essas mutações são detectadas pelos testes automatizados. Se uma mutação não for identificada 
+    por um teste, isso pode indicar uma lacuna na cobertura dos testes, sugerindo a necessidade de aprimoramentos.
+
+Desenvolvimento guiado por testes
+
+    O desenvolvimento guiado por testes é uma abordagem de desenvolvimento de software que se baseia em um ciclo curto e iterativo. Nesse 
+    processo, os desenvolvedores escrevem testes automatizados antes de implementarem o código-fonte. É importante perceber que o TDD não 
+    é uma técnica de teste, e sim de desenvolvimento. O objetivo principal não é testar o software – ou seja, colocá-lo à prova para 
+    aumentar sua qualidade –, mas utilizar os testes automatizados como guia do processo de desenvolvimento.
+
+    Clico TDD:
+        
+        Teste: Inicalmente, é criado um teste automatizado que descreve a funcionalidade que será desenvolvida. Esse teste falhará, uma
+        vez que a funcionalidade ainda não foi implementada. ----> Desenvolvimento: A seguir, é escrita a quantidade mínima de código
+        necessário para que o teste automatizado passe com sucesso. O foco é fazer o teste falhar primeiro e, em seguida, escrever o 
+        código necessário para que ele passe. ----> Refatoração: Por fim, o código é revistado e refinado para garantir sua qualidade
+        interna. Durante esta etapa, é possível melhorar a estrutura, a legibilidade e o desempenho do código, mantendo o teste
+        automatizado intacto para garantir que nenhuma funcionalidade tenha sido quebrada.

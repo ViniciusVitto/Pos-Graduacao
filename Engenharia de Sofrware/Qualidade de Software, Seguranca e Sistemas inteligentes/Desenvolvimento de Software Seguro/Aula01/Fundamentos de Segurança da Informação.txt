@@ -1,0 +1,219 @@
+Conceitos básicos de segurança
+
+    Um dos passos básicos da disseminação da cultura de segurança da informação é definir, com clareza, os termos clássicos da área 
+    de segurança no contexto da segurança da informação em sistemas de informação.
+
+        Segurança - Uma condição do sistema resultante do estabelecimento e da manutenção das medidas de proteção do sistema. É a 
+        habilidade do sistema de resistir a ataques.
+
+        Ataque - Um ato intencional pelo qual uma entidade tenta evadir os serviços de segurança e violar a política de segurança de um
+        sistema. Um ataque real à segurança do sistema deriva de uma ameaça inteligente.
+
+        Ameaça - Um potencial de violação de segurança que existe quando há uma entidade, circustância, capacidade, ação ou evento que 
+        pode causar danos. Uma circustância comum que ameaça um sistema de informação é a presença de vulnerabilidades.
+
+        Vulnerabilidades - Uma falha ou fraqueza no projeot, implementação ou operação e gestão que possam ser exploradas para violar
+        a política de segurança do sistema. Um sistema pode ter três tipos de vulnerabilidades:
+
+            a. Vulnerabilidade no projeto ou na especificação;
+
+            b. Vulnerabilidade na implementação
+
+            c. Vulnerabilidade na operação e no gerenciamento.
+    Os fundamentos de segurança da informação são a forma mais básica de proteção de dados para projetar sistemas de informação seguros 
+    (software seguro).
+
+Principais fundamentos de segurança da informação
+
+    Embora existam muitas divergências na literatura sobre quais fundamentos de segurança da informação formam os pilares da segurança 
+    da informação, cinco deles são amplamente reconhecidos: integridade, autenticidade, confidencialidade, autorização de acesso e 
+    disponibilidade. Outros fundamentos importantes, como irretratabilidade e irretroatividade, complementam a segurança da informação.
+
+        Integridade - verifica se os dados forma alterados, destruídos ou perdidos de maneira não autorizada ou acidental. Os sistemas de
+        processamento de dados não devem assumir que os dados fornecidos como entrada estão íntegros por padrão, mesmo que sua fonte seja
+        considerada confiável.
+
+        Autenticidade - confirma se a origem dos dados recebidos ou a entidade associada em uma comunicação são exatamente quem reividicam
+        ser. Os sistemas de processamento de dados não devem assumir que os dados fornecidos como entrada são autênticos ou que foram 
+        fornecidos por uma entidade legítima por padrão, mesmo que sua fonte seja considerada confiável.
+
+        Confidencialidade - protege os dados contra divulgação não autorizada. Os sistemas de processamento de dados devem garantir o 
+        sigilo dos dados sensíveis que estão armazenados ou em trânsito nas redes de comunicação de dados. Alem disso, não devem assumir
+        que os dados fornecidos como entrada estão em conformidade com os requisistos de sigilo por padrão, mesmo que sua fonte seja 
+        considerada confiavel.
+
+        Autorização de acesso - previne o uso não autorizado de um recurso, incluindo impedir o uso de um recurso de maneira não 
+        autorizada. A proteção pode ser aplicada a vários tipos de acesso a um recurso ou para todos os acessos a um recurso. Dentre os 
+        vários tipos de acesso que podem ser controlados, podem citar: o uso de um recurso de comunicação; a leitura, a escrita ou a 
+        remoção de um recurso de informação; e a execução de um recurso de processamento.
+
+        Disponibilidade - protege um sistema de processamento de dados contra indisponibilidade, mantendo-o acessível, utilizável ou
+        operacional sob demanda por uma entidade autorizada, de acordo com especificações de desempenho. O sistema é considerado 
+        disponível se oferecer serviços de acordo com seu projeto sempre que for solicitado pelos usuários.
+
+    Outros fundamentos de segurança da informação complementares são necessários para atender requisitos de segurança específicos. Por 
+    exemplo: sistemas que operam transações eletrônicas precisam ser protegidos contra fraude. Nesses sistemas, a irretratabilidade e a 
+    irretroatividade são fundamentais para combater as tentativas de fraude.
+
+        Irretratabilidade ou não repúdio - oferece proteção contra a negação falsa de envolvimento em uma associação, mais especificamente,
+        uma associação de comunicação que transfere dados. Existem dois tipos específicos:
+            a. não repúdio com prova de origem;
+            
+            b. não repúdio com prova de entrega.
+
+        O não repúdio com prova de origem fornece, ao receptor dos dados, prova (evidência) da origem dos dados, o que protege o receptor
+        contra uma tentativa do emissor de negar falsamente o envio dos dados. No não repúdio com prova de entrega, o emissor dos dados 
+        é munido com prova de entrega dos dados, o que protege o emissor contra qualquer tentativa subsequente do receptor de negar 
+        falsamente o recebimento dos dados.
+
+        Irretroatividade - oferece proteção para que ações presentes não tenham efeito sobre fatos passados. Em termos de segurança da 
+        informação, essa proteção visa impedir a marcação de uma informação do presente ou a modificação da ordem cronológica de eventos 
+        com um carimbo de tempo do passado criado no presente, como produzir um documento com data retroativa.
+
+Mecanismos de segurança
+
+    Integridade de dados
+
+        Recursos para garantir a integridade de uma unidade de dados ou de um fluxo de unidade de dados. A determinação da integridade 
+        de uma unidade de dados envolve dois processos, um na entidade emissora e um na entidade receptora.
+
+        Esse mecanismo é comumente implementado com um algoritmo de resumo de mensagem ou por uma função hash que processa a unidade de 
+        dados para produzir um código de verificação de integridade representado por um bloco de bits de tamanho fixo, conhecido como 
+        digest ou hash. Esse digest deve ser armazenado junto com a unidade de dados.
+
+        Para fazer a verificação da integridade de dados, uma entidade deve separar a unidade de dados do respectivo digest, para, então, 
+        recalcular o digest da unidade de dados e compará-lo com o digest armazenado. Se ambos os digests (o armazenado e o recalculado) 
+        forem idênticos, a unidade de dados é considerada íntegra.
+
+        Entre as principias características de um algoritmo de resumo de mensagem ou de função hash, podemos citar:
+
+            Efeito avalanche - Pequenas variações na unidade de dados resultam em grandes alterações no digest.
+
+            Efeito colisão - A chance de duas unidades de dados diferentes gerarem o mesmo digest é pequena, mas pode ocorrer.
+
+            Criptografia irreversível - É praticamente impossível determinar a unidade de dados a partir de um digest conhecido. Essa
+            última característica será muito útil para fazermos o armazenamento seguro de senhas pessoais de usuários do sistemas.
+
+    
+    Cifragem de dados
+
+        Uma transformação criptográfica de dados, chamados de texto plano, em uma forma diferente, chamada de texto cifrado, que esconde 
+        o significado original dos dados e evita que a forma original seja usada. Portanto, os sistemas criptográficos geralmente envolvem
+        um algoritmo de criptografia e um valor secreto conhecido como chave. 
+
+        Os algoritmos criptográficos são divididos em dois tipos: reversíveis e irreversíveis. Nos algoritmos criptográficos reversíveis,
+        o processo de reversão que transforma o texto cifrado no texto plano original é chamado de decriptação. Por outro lado, os 
+        algoritmos criptográficos irreversíveis são usados quando é indesejável que o texto plano original seja recuperado, como no caso 
+        de senhas pessoais.
+
+        Existem duas classificações gerais para algoritmos criptográficos reversíveis: criptografia simétrica e criptografia assimétrica:
+
+            Criptografia simétrica
+
+                A criptografia simétrica também é conhecida como criptografia de chave secreta  a chave secreta é utilizada tanto na 
+                operação de cifragem quanto na de decriptação, e deve ser conhecida por todas as partes interessadas e autorizadas a 
+                acessar o texto plano.
+
+                Em um sistema de comunicação, a chave secreta deve ser compartilhada entre a origem e o destino, o que requer uma forma 
+                segura para fazer a distribuição da chave entre as partes envolvidas.
+
+                Para atacar um sistema criptográfico, uma entidade hostil pode executar um ataque de força bruta, em que o atacante tenta 
+                decriptar o texto cifrado usando todas as possíveis combinações de chaves até que a chave correta seja identificada.
+
+                Como a chave secreta é formada por uma sequência de bits, quanto maior a quantidade de bits da chave (ou seja, quanto 
+                maior o seu tamanho), maior a quantidade de combinações possíveis e, por conseguinte, mais difícil é descobrir a chave 
+                por força bruta.
+
+            Criptografia assimétrica
+
+                A criptografia assimétrica também é conhecida como criptografia de chave pública, utilizamos um par de chaves: a chave 
+                pública e a chave privada. A chave privada é um segredo e, geralmente, é protegida com criptografia simétrica, em que a 
+                chave secreta é produzida a partir de uma frase secreta conhecida apenas pelo dono da chave privada.
+
+                A chave pública não requer sigilo e é divulgada, por exemplo, para uma contraparte em um processo de comunicação segura. 
+                As chaves assimétricas são matematicamente relacionadas, mas, a partir da chave pública, é extremamente difícil 
+                (praticamente impossível) descobrir a chave privada.
+
+        Certificação digital
+
+            O mecanismo de certificação digital ou certificação, é o ato ou processo de atestar a verdade e exatidão da amarração entre
+            itens de dados em um certificado.
+
+            Existem dois mecanismos de certificação importantes: 
+
+                Certificação de chave pública
+                    
+                    O mecanismo de certificação de chave pública, é o ato ou processo de atestar a propriedade de uma chave pública 
+                    emitindo um certificado de chave pública que liga a chave ao nome da entidade que possui a chave privada 
+                    correspondente. Além de vincular uma chave a um nome, um certificado de chave pública pode vincular esses itens com 
+                    outros itens de dados restritivos ou explicativos.
+
+                    O certificado de chave pública ou certificado digital é emitido por uma entidade confiável, conhecida como autoridade 
+                    certificadora (AC). Essa entidade atua como um notário que utiliza um mecanismo de certificação de chave pública 
+                    seguro para atestar a amarração entre os itens de dados presentes no certificado.
+
+                Certificação de carimbo do tempo
+
+                    O mecanismo de certificação de carimbo do tempo visa produzir um selo ou registro de tempo confiável que ateste a data 
+                    e a hora exatas de um evento. O carimbo do tempo, pode ser usado como evidência para provar que um objeto de dados 
+                    existiu (ou que um evento ocorreu) em ou antes de um tempo particular. Sem a comprovação do carimbo do tempo, um 
+                    certificado de chave pública expirado ou revogado pode ser usado para verificar uma assinatura digital criada com 
+                    data e hora anterior a sua data e hora de expiração ou revogação.
+
+                    O objetivo principal da certificação de carimbo do tempo é fornecer proteção de irretroatividade, para impedir fraudes 
+                    que envolvam um registro de tempo, como, por exemplo, a criação e assinatura de um documento com data retroativa ou a 
+                    mudança da ordem cronológica de eventos ou transações eletrônicas assinadas.
+
+                Controle de acesso
+
+                    O mecanismo de controle de acesso, visa a proteção dos recursos do sistema contra acesso não autorizado. 
+
+                    os mecanismos de controle de acesso podem, por exemplo, se basear no uso de um ou mais dos seguintes pontos:
+
+                        Bases de informação de controle de acesso - Os direitos de acesso das entidades autorizadas podem ser mantidos
+                        por centros de autorização ou pelas prórpias entidades sendo acessadas, e podem utilizar o formato de lista de 
+                        acesso ou matriz de estrutura hierárquica ou distribuída. Essa técnica de controle de acesso pressupõe que a 
+                        autenticação da entidade requerente foi realizada de forma segura e que a identidade dessa entidade está 
+                        confirmada.
+
+                        Informações de autenticação do requerente - Podem ser senhas, posses ou uma combinação de ambas, que são
+                        posteriormente apresentadas como prova da autorização do requerente.
+
+                        Capacidade do requerente - A posse e posterior apresentação constituem prova do direito de acesso à entidade ou a 
+                        um recurso definido pela capacidade.
+
+                        Rótulos de segurança - Quando associados a uma entidade, podem ser usados para garantir ou negar acesso, 
+                        normalmente de acordo com uma política de segurança.
+
+                        Hora da tentativa de acesso - A fonte de informação da hora deve ser confiável e a consulta deve sert realizada
+                        de forma segura.
+
+                        Rota da tentativa de acesso - A requisição de acesso deve percorrer um caminho seguro até a entidade que detém
+                        o recurso, e pode ser intermediada por uma entidade confiável.
+
+                        Duração do acesso - O tempo-limite do acesso à entidade ou a um recurso definido deve respeitar a política de 
+                        segurança.
+
+                Controle de autenticação
+
+                    O mecanismo de controle de autenticação ou troca de autenticação, visa verificar a identidade de uma entidade por meio 
+                    da troca de informações. 
+
+                    Na autenticação monofator, a troca de autenticação ocorre em uma etapa e a informação de autenticação é formada por um 
+                    único fator. Na autenticação multifator, a troca de autenticação ocorre em mais de uma etapa e a informação de 
+                    autenticação de cada etapa é formada por um fator diferente das etapas anteriores. Comumente, os sistemas de informação 
+                    de baixa criticidade adotam a autenticação monofator – particularmente, com o uso de senha pessoal –, enquanto 
+                    ambientes de média e alta criticidade optam pela multifator.
+
+                Controle de disponibilidade
+
+                    O mecanismo de controle de disponibilidade tem por objetivo garantir que o sistema esteja operacional e disponível 
+                    para os usuários que têm acesso autorizado de acordo com as especificações de desempenho do projeto do sistema. É 
+                    importante salientar que, independentemente de um sistema ser muito bem projetado ou seus componentes serem altamente 
+                    confiáveis, as falhas não podem ser eliminadas por completo. Por outro lado, é possível gerenciar as falhas para 
+                    minimizar o impacto em um sistema.
+
+                    De forma simples, podemos classificar um sistema com tolerância a falhas como um sistema que consegue operar na 
+                    presença de falhas em seus componentes por existir redundância desses componentes, ou seja, quando um componente 
+                    entra em falha, o componente alternativo é capaz de assumir sua função de forma transparente. A alta disponibilidade 
+                    (high availability) é frequentemente associada a sistemas com tolerância a falhas.

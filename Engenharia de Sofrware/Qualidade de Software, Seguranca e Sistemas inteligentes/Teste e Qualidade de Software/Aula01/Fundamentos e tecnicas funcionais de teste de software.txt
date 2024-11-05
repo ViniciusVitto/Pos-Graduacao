@@ -1,0 +1,200 @@
+Qualidade do produto de software
+
+    A qualidade do produto de software é fortemente afetada pela qualidade do seu processo de construção e pela aplicação de 
+    boas práticas da engenharia de software ao longo desse processo.É importante avaliar e monitorar a qualidade do produto, 
+    tanto para assegurar a construção de produtos de qualidade quanto para compreender a adequação das práticas de construção 
+    utilizadas.Para isso, requisitos de qualidade de produtos devem ser definidos, e seu alcance deve ser monitorado ao longo 
+    da execução do projeto.
+
+    A qualidade de um produto de software pode ser definida por meio de um conjunto de características que devem ser alcançadas 
+    em determinado grau para que o produto atenda às necessidades de seus usuários.
+
+    A norma ISO 25010 (Software Product Quality Model) contém um modelo para qualidade de produtos de software que contempla 
+    as características de qualidade de um produto de software e as diversas subcaracterísticas.
+
+Garantia da qualidade, controle da qualidade, verificação e validação
+
+    Garantia da qualidade - Tem como propósito assegurar que os produtos de trabalho e a execução dos 
+    processos estejam em conformidade com os planos, procedimentos e padrões estabelecidos. Ou seja, ela avalia a conformidade 
+    do processo e do produto, visando a assegurar que os processos planejados foram implementados e que os produtos seguem os 
+    padrões pré-estabelecidos.
+
+    Controle e qualidade - Por sua vez, corresponde à verificação e à validação do software. É aí que entram métodos de teste de 
+    software e revisões visando a encontrar defeitos naquele projeto específico.
+
+    Verificação - Tem como propósito confirmar que cada produto atende apropriadamente aos requisitos especificados, ou seja, 
+    confirmar se o produto está sendo construído corretamente. 
+
+    Validação -  Tem como propósito confirmar que um produto ou componente do produto atenderá ao seu uso pretendido quando 
+    colocado no ambiente para o qual foi desenvolvido, ou seja, confirmar que estamos construindo o produto correto, aquele 
+    que de fato atende às necessidades do cliente.
+
+    Na validação, a preocupação é garantir que o produto atende ao uso esperado, enquanto na verificação é garantir que ele
+    atende aos requisitos especificados.
+
+        Similariedades: A validação usa abordagens semelhantes da verificação, como testes e revisões.
+        Diferenças: A validação requer a avaliação no ambiente de uso final do sistema ou em um ambiente que simule muito bem 
+        esse ambiente de uso final. A validação requer a participação do usuário final e demais intereassados.
+
+Defeitos de software
+
+    Para melhorar a qualidade de produtos de software, é preciso encontrar e corrigir defeitos.O padrão IEEE para classificar 
+    anomalias de software estabelece os termos “erro”, “defeito” e “falha” da seguinte forma:
+
+    ERRO    ------------>       DEFEITO     ------------>       FALHA
+    Engano durante              Algum problema em               Problema encontrado ao
+    o desenvolvidomento         artefato de software            executar o software
+
+    O defeito se manifesta nos artefatos produzidos e é apontável, seja em um requisito que descreve uma regra de negócio de 
+    forma equivocada, em um diagrama que representa equivocadamente as conexões do sistema ou em uma linha de código que 
+    representa um equívoco no algoritmo. Defeitos podem ser inseridos na especificação, na arquitetura, nos projetos, no código,
+    nas suítes de teste, etc. Se o defeito está lá é porque alguém errou em algum ponto do processo de construção, e é possível 
+    ainda que esse defeito leve a falhas do software em operação. Defeitos em artefatos antecedentes levam a defeitos em artefatos
+    consequentes. 
+
+    Sabe-se que defeitos de software permanecem presentes em diversos produtos de software produzidos e liberados e que a maioria 
+    se encontra em partes do produto de software raramente utilizadas. As consequências desses defeitos envolvem estimativas de 
+    esforço e prazo que deixam de fazer sentido e produtos finais que não atendem às necessidades do usuário. O esforço de retrabalho 
+    para corrigir defeitos em projetos de software recentes gira em torno de 30 a 50% do esforço total do desenvolvimento, e corrigir
+    defeitos após a entrega do produto costuma ser muito mais caro.
+
+    A principal causa dos defeitos é a tradução incorreta de informações. Quanto antes a presença de um defeito for revelada, menor o 
+    custo de correção e maior a probabilidade de corrigi-lo corretamente. Isso ressalta a importância de se empregar atividades de 
+    verificação e validação (V&V) ao longo do desenvolvimento de software.
+
+Teste de software: conceitos, fases e processo
+
+    Conceitos de teste de software
+
+        Teste de software pode ser definido como um processo de executar um software com o objetivo de revelar a presença de falhas, ou,
+        falhando nesse objetivo, aumentar a confiança sobre o software. Ou seja, é um processo em que se procura refutar a assertiva de 
+        que o produto está correto, buscando um contraexemplo com entradas que façam as saídas obtidas diferirem das saídas esperadas.
+
+        Para software crítico, projetar e executar casos de teste que tenham alta probabilidade de revelar falhas tende a ser uma das 
+        atividades mais onerosas do desenvolvimento de software. Além disso, a realização de testes é uma atividade essencial para 
+        empresas que buscam avaliar a qualidade de seus processos, sendo exigida pelos principais modelos de referência nacionais e 
+        internacionais.
+
+        Atividades de testes tipicamente envolve:
+
+            - Execução do software com entradas representativas para as futuras condições de operação;
+
+            - Comparação entre saídas produzidas e esperadas;
+
+            - Comparação entre estados resultantes e esperados;
+
+            - Mensuração de características de execução (memoria e tempo consumidos, etc).
+        
+        Atividades de teste de software
+
+            Caso de teste - Descreve uma condição particular a ser testada e é composto por valores de entrada, restrições para a sua 
+            execução e um resultado ou comportamento esperado.
+
+            Procedimento ou roteiro de teste - Descreve os passos necessários para a execução de um ou grupos de casos de teste.
+
+            Critérios de cobertura dos testes - Permitem a identificação de partes do programa que devem ser executadas para garantir a 
+            qualidade do software e indicar quando ele foi suficientemente testado. A cobertura dos testes determina o percentual de 
+            elementos testados em um programa.
+
+            Rodada (bateria) de teste - Execução de todos os casos de teste para uma versão do produto em determinado ambiente. Uma nova 
+            rodada de teste deve ser executada caso o critério de aceitação do produto não tenha sido atingido.
+
+            Incidente de teste - Evento ou comportamento ocorrido durante a execução dos testes que requer investigação. Não há garantia 
+            de que todo incidente seja uma falha, pois ainda precisa ser analisado.
+
+        Princípios de teste de software
+
+            - Devem ser completamente planejados antes de seu início.
+
+            - Os testes devem ser rastreáveis aos requisitos do usuário. 
+
+            - Para aumentar sua eficácia, os testes de sistema devem ser executados por equipes independentes. 
+
+            - Não planeje o esforço de teste considerando que falhas não serão encontradas.
+        
+        Um bom teste:
+
+            - Tem alta probabilidade de revelar falhas.
+            
+            - Não é redudante.
+
+            - É abrangente o suficiente.
+
+            - Tem um nível adequado de complexidade.
+
+    Fases de teste de software
+
+        O teste de software é realizado em diferentes fases ao longo do desenvolvimento: teste unitário, teste de integração, 
+        teste de sistema e teste de aceitação.
+
+        O teste unitário se refere à fase do processo de teste em que se testam as menores unidades de software desenvolvidas. 
+        O teste de integração envolve, a partir dos módulos testados no nível de unidade, testar a estrutura de programa que 
+        foi determinada pelo projeto. O teste de sistema envolve executar o sistema sob o ponto de vista de seu usuário final, 
+        varrendo as funcionalidades em busca de falhas. Por fim, o teste de aceitação, eventualmente também chamado de homologação, 
+        é realizado pelo cliente.
+    
+    Processo de teste de sistema
+
+        Organizar um processo com as atividades a serem realizadas durante o teste de sistema é essencial, essas atividades 
+        envolvem planejar e projetar testes, executar testes, controlar testes e analisar os resultados. Organizar bem o processo, 
+        definindo atividades, papéis e artefatos, tende a melhorar a alocação dos recursos definidos para o projeto e o gerenciamento 
+        da equipe envolvida em testes.
+
+        Técnicas de teste de software
+
+            O projeto de teste pode ser tão difícil quanto o projeto do próprio produto a ser testado. Projeto de teste a partir 
+            dos requisitos é um dos melhores mecanismos para prevenção de defeitos por funcionar também como uma forma de revisão
+            dos requisitos.
+
+            Uma técnica de teste define quais propriedades precisam ser testadas visando à inexistência de defeitos. Como é impossível
+            garantir inexistência de erros através de testes, o conceito é utilizado, na prática, para definir uma qualidade mínima que 
+            será avaliada pelo teste. O objetivo é obter, de maneira sistemática, um conjunto de casos de teste efetivo quanto à meta
+            principal de teste – revelar falhas no programa.
+
+            A técnica de teste deve ser:
+
+                Válida: os casos de testes incluídos pela aplicação da técnica devem acusar falhas quando de fato existirem defeitos no
+                software sendo testado (oráculo correto).
+
+                Confiável: as falhas encontradas são indiferentes à escolha dos doados e das ações desde que satisfaçam às condições dos
+                casos de teste (permite reproduzir a falha).
+
+                Completa: segundo um padrão de completeza, como, por exemplo, cobertura adequada de elementos e condições.
+
+                Viável: deve ter custo de aplicação razoável.
+
+            As técnicas de teste se dividem nas seguintes categorias:
+
+                - Funcional (ou caixa preta/caixa fechada);
+
+                - Estrutural (ou caixa branca/caixa aberta);
+
+                - Baseada em defeitos.
+
+            Técnicas de teste funcionais
+
+                As técnicas funcionais se baseiam na especificação (requisitos) do software para derivar os casos de teste. Abordam o 
+                software de um ponto de vista macroscópico, sem enfatizar detalhes técnicos de como o sistema foi implementado.
+
+                A aplicação das técnicas funcionais envolve dois passos principais:
+
+                    - Identificar as funções que o software deve realizar;
+
+                    - Criar casos de teste para verificar se essas funções estão sendo executadas corretamente.
+
+                A ideia de aplicar técnicas de teste verificáveis está relacionada com a dificuldade em quantificar a atividade de teste. 
+                Sem essas técnicas e um projeto sistemático de casos de teste não se pode garantir que partes essenciais ou críticas do 
+                software estão sendo testadas. Ou seja, não é possível determinar se um sistema que não apresentou falhas tem qualidade 
+                boa ou testes ruins. Com o uso das técnicas, é possível responder a essa pergunta verificando a correta aplicação da 
+                técnica. Em vez de simplesmente dizer que o sistema não apresentou falhas nos testes, pode-se dizer que ele não apresentou 
+                falhas nos testes aplicados seguindo corretamente uma técnica específica.
+
+                Particionamento em classes de equivalência
+
+                    Esta técnica envolve dividir as entradas do sistema em classes de equivalência, em que cada classe corresponde a um 
+                    conjunto de valores para aquela entrada para os quais o sistema, de acordo com os requisitos, deveria ter comportamento 
+                    equivalente.
+
+                    Ou seja, uma classe de equivalência representa um conjunto de estados válidos e inválidos para uma condição de entrada. 
+                    Tipicamente, uma condição de entrada pode ser um valor numérico específico, uma faixa de valores, um conjunto de 
+                    valores relacionados ou uma condição lógica.
