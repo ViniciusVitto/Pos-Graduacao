@@ -1,0 +1,44 @@
+Conceitos básicos da engenharia de requisitos
+
+    O termo requisito denota três conceitos:
+
+        - Uma necessidade percebida por um interessado;
+        
+        - Uma capacidade ou propriedade que um sistema deve ter;
+        
+        - Uma representação documentada de uma necessidade, capacidade ou propriedade. 
+
+    Não basta especificar o que o sistema fará; é preciso também descrever capacidades ou propriedades relacionadas a outras características do software, 
+    como compatibilidade com outros sistemas, confiabilidade, desempenho, manutenibilidade, portabilidade, segurança e usabilidade.
+
+    É importante ressaltar que há diferentes visões para requisitos:
+
+        Requisitos do usuário: Os requisitos do usuário expressam resultados desejados para superar problemas no mundo real. Normalmente são especificados
+        de forma mais abstrata, focados no problema e sem prover muito detalhes do que exatamente será construído.
+
+        Requisitos do sistema: Focam na especficação das soluções a serem desenvolvidas utilizando sistemas novos e existentes. Eles devem fornecer
+        detalhes sobre o que será construído, incluindo a especficação das interfaces e da interação com pessoas, máquinas e outro sistema de software.
+
+    Em abordagens mais tradicionais, os requisitos do usuário são comumente especificados em documentos conhecidos como documento de visão ou documento 
+    de requisitos do usuário. Já os requisitos do sistema são comumente especificados em documentos conhecidos como documento de requisitos do sistema, 
+    ou do software.
+
+    As atividades típicas relacionadas com a produção e a gerência dos requisitos: 
+
+
+            ------------------------------------------------    Engenharia de requisitos    ------------------------------------------------
+            Produção de requisitos                                                                                    Gerência de requisitos
+
+                - Levantamento                                                                          - Gerência de configuração
+                - Especficação                                                                          - Controle de mudanças
+                - Verificação                                                                           - Rastreabilidade
+                - Validação                                                                             - Gerência da qualidade de requisitos
+    
+Tipos de requisitos
+
+    Os requisitos funcionais descrevem as funcionalidades que o software deve ser capaz de realizar. Ou seja, são requisitos diretamente ligados à 
+    funcionalidade do software. Os requisitos não funcionais, em vez de informarem o que o sistema fará, descrevem características de qualidade 
+    ou restrições.Por fim, os requisitos de domínio descrevem regras de negócio que devem ser atendidas pelo sistema. Normalmente, essas regras 
+    ajudam a detalhar os requisitos funcionais com aspectos que precisarão ser considerados ou obedecidos em computações específicas.
+
+    

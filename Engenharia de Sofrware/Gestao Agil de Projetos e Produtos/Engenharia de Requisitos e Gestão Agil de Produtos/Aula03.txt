@@ -1,0 +1,79 @@
+Especificação de requisitos ágeis
+
+    Features
+
+        O termo feature é utilizado de maneira similar ao conceito de requisito funcional do usuário, descrevendo de forma abstrata uma funcionalidade 
+        que o software deve prover.Para subsidiar o desenvolvimento, essas features necessitarão de um detalhamento adicional. A prática mais adotada 
+        para o detalhamento de features é a escrita de histórias de usuário, que normalmente são feitas pelo product owner (PO). Essas histórias de 
+        usuário, por sua vez, serão quebradas em tarefas pela equipe de desenvolvimento.
+
+    Histórias de usuário
+
+        Uma história de usuário é uma descrição simples e curta de uma funcionalidade, contada pela perspectiva de uma pessoa que deseja desempenhar 
+        uma atividade no sistema. No desenvolvimento ágil, nosso progresso é baseado em fornecer ao usuário a possibilidade de realizar algo útil com 
+        o software que ele não era capaz de realizar antes. Assim, as histórias de usuário, como o nome indica, devem ser escritas da perspectiva dos 
+        usuários e descrever funcionalidades que tragam algum benefício para eles, de modo que sua implementação possa contar para o progresso do projeto 
+        como um todo.
+
+    Critérios de aceitação
+
+        Um critério de aceitação de uma história de usuário descreve um conjunto ordenado de comportamentos, baseado em uma entrada, para alcançar um 
+        resultado específico de uma funcionalidade. Costumam ser descrições adicionais utilizadas para apoiar a aceitação da história de usuário.
+
+    Enablers 
+
+        Fora o ponto de vista do usuário, o que pode acontecer é que surjam atividades preparatórias necessárias para fornecer funcionalidades de negócio 
+        futuras. Esses itens também entram no backlog do produto, mas, nesse caso, não estamos falando de histórias de usuários, mas de enablers. Enablers 
+        podem ser de quatro tipos:
+
+        Exploração: Envolvem atividades necessárias para desenvolver uma compreensão das necessidades do cliente, incluindo a exploração de soluções
+        potenciais e a avaliação de alternativas.
+
+        Arquitetura: São criados para apoiar a construção da arquitetura de solução, que permite um desenvolvimento mais suave e rápido.
+
+        Infraestrutura: São criados para construir, aprimorar e atomatizar ambientes de desenvolvimento, teste e implatação. Facilitam um desenvolvimento
+        mais rápido, teste de alta qualidade e uma pipeline de entrega contínua mais rápida.
+
+        Conformidade: Facilitam o gerenciamento de atividades de conformidade específicas, incluindo verificação e validação e aprovações regulatórias.
+
+    Requisitos não funcionais
+
+        Sistemas de software tendem a ter outras características, além da funcionalidade em si. Muitas vezes, essas características são transversais a 
+        todo o sistema, ou seja, é comum que devam ser consideradas para todas as histórias de usuário. De acordo com o modelo de qualidade de produtos 
+        de software ISO 25010, as características de qualidade que podem precisar ser especificadas, além dos aspectos funcionais capturados pelos 
+        requisitos funcionais, são:
+
+            - Compatibilidade;
+ 
+            - Confiabilidade;
+
+            - Desempenho;
+
+            - Manutenibilidade;
+            
+            - Portabilidade;
+            
+            - Segurança;
+            
+            - Usabilidade.
+
+    Backlog do produto
+    
+        No Scrum, o backlog do produto é a única fonte de requisitos para qualquer mudança a ser feita no produto, e é mantido pelo PO. Ou seja, o backlog 
+        é uma lista ordenada de tudo que se sabe ser essencial, importante ou desejável para o produto. Isso inclui features, histórias de usuário, 
+        enablers e requisitos não funcionais.
+
+    Verificação e validação de requisitos ágeis
+
+        Enquanto a verificação foca na correta engenharia do produto, a validação envolve assegurar que estamos construindo o produto que o cliente 
+        necessita ou deseja, e envolve necessariamente o cliente.
+
+    Definition of ready e definition of done
+
+        O definition of ready diz respeito à verificação e validação dos requisitos, enquanto o definition of done diz respeito à verificação e validação
+        do software sendo construído.
+
+        O definition of ready (que significa que uma história está preparada para ser implementada) é comumente associado a ter detalhados a história de 
+        usuário e seus critérios de aceitação. Já o definition of done (que significa que uma história foi implementada e está feita) é obtido quando uma 
+        história de usuário foi implementada e testada, atendendo aos critérios de aceitação e demais requisitos definidos para considerar a história como
+        concluída.

@@ -1,0 +1,97 @@
+Scrum: papéis, cerimônias e artefatos
+
+    Pilares do Scrum:
+        
+        São baseados em três pilares
+
+            Transparência - Todos os artefatos relacionados com o produto que está sendo construído e sua gestão devem estar disponíveis para toda 
+            a equipe Scrum.
+
+            Inspeção - Os usuários Scrum devem, frequentimente, inspecionar os artefatos Scrum e o processo para detectar variações. Essas inspeções
+            devem ocorrer tanto ao longo das cerimônias do Scrum quanto em atividades como reuniões para refinamento do backlog ou revisão de código.
+
+            Adaptação - Se um ou mais aspectos se desviaram do esperado, o processo ou o materia sendo produzido deve ser ajustado. A possibilidade
+            constante de adaptação é a essência dos métodos ágeis.
+    
+                                                            Scrum
+    
+                Papéis                                                                                              Artefatos
+    Product     Scrum      Equipe de                                                                   Backlog     Backlog       Incremento de produto
+     owner      master  desenvolvimento                                                               do produto  do sprint   potencialmente entregável
+                                                           Cerimônias
+                       Sprint  Planejamento    Reunião   Desenvolvimento   Revisão     Retrospectiva   Refinamento
+                                do sprint       diaria      do sprint       do sprint     do sprint     do backlog
+
+    PO - Product owner - é responsável pela produção e gestão ágil dos requisitos para o produto. Ele foca no retorno de investimento e no valor agregado 
+    para o cliente. Ele é o único que edita e gerencia o backlog do produto.
+
+    o PO deve buscar entender o produto, os objetivos de negócio e as necessidades dos interessados, ter visão estratégica para o produto, atuar próximo 
+    à equipe de desenvolvimento e é o responsável pelo backlog do produto.
+
+    Por fim, a equipe de desenvolvimento deve buscar ser proativa e autogerenciável em relação ao atendimento das tarefas do backlog do sprint. A equipe 
+    deve ter atuação multifuncional (dentro do possível de sua expertise) e assumir responsabilidade compartilhada pelo desenvolvimento.
+
+    Cerimônias do Scrum
+
+        Sprint
+            
+            O sprint corresponde a um período fixo de tempo (normalmente duas semanas) durante o qual um incremento utilizável do produto é criado. Para 
+            viabilizar o desenvolvimento em sprints, as seguintes cerimônias são realizadas: planejamento do sprint, reunião diária, desenvolvimento do 
+            sprint, revisão do sprint e retrospectiva do sprint. 
+
+        Planejamento do sprint
+        
+            Durante o planejamento do sprint, o objetivo do sprint é definido e o trabalho a ser realizado é planejado. Isso envolve priorizar, entre os 
+            itens do backlog do produto, aqueles que devem ser desenvolvidos primeiro, analisar quais itens estão prontos para entrar no sprint e 
+            analisar o que pode ser incluído considerando as estimativas e a capacidade da equipe.
+
+        Desenvolvimento do sprint
+
+            O desenvolvimento do sprint tem início assim que a equipe finaliza o planejamento do sprint e concorda com o conteúdo do próximo sprint. É 
+            importante ressaltar que ninguém diz à equipe de desenvolvimento em qual ordem ou como fazer o trabalho previsto no backlog do sprint. Os 
+            membros da equipe de desenvolvimento definem seu próprio trabalho ao escolherem tarefas do sprint para realizar e devem se auto-organizar 
+            para alcançar o objetivo do sprint.
+
+        Reunião diária
+            
+            A reunião diária, envolve uma reunião diária de cerca de 15 minutos para que a equipe de desenvolvimento possa sincronizar as atividades e 
+            criar um plano para as próximas 24 horas.
+
+        Revisão do sprint
+
+            A revisão do sprint é uma atividade de inspeção e adaptação realizada no final do sprint para verificar o alcance dos objetivos do sprint.
+            Ela envolve inspecionar e fazer o aceite dos itens do backlog do sprint que foram concluídos durante o sprint.
+
+        Retrospectiva do sprint
+        
+            Por fim, a retrospectiva do sprint é uma oportunidade para a equipe refletir sobre melhorias a serem aplicadas no próximo sprint. Essa 
+            reflexão envolve analisar o que foi bom e o que poderia melhorar e pensar em ações concretas para melhoria que poderiam ser aplicadas no 
+            próximo sprint.
+
+        Refinamento do backlog
+    
+            Além das cerimônias diretamente relacionadas com o sprint, há ainda o refinamento do backlog, que envolve preparar os itens do backlog do 
+            produto para sprints futuros, refinando-os durante o sprint corrente para satisfazer a definition of ready. Quem conduz essa cerimônia é 
+            o PO, e ela está mais relacionada com a gestão ágil do produto do que com a gestão do projeto. 
+
+        Artefatos do Scrum
+        
+            Os artefatos do Scrum são o backlog do produto, o backlog do sprint e o incremento do produto potencialmente entregável gerado a cada novo 
+            sprint. Seguindo os pilares da transparência, inspeção e adaptação, eles devem estar sempre disponíveis de forma transparente para toda a 
+            equipe Scrum.
+
+Ferramentas de gestão ágil de projetos
+
+    Existem diversas ferramentas de mercado para apoiar a gestão ágil de projetos de software. Muitas vezes nos referimos a essas ferramentas de forma 
+    mais simples como issue trackers, já que permitem acompanhar o progresso de determinadas tarefas.
+
+    Estimativa e velocidade
+
+        Assim como na gestão tradicional, a gestão ágil de projetos precisa lidar com a tríplice restrição de qualquer projeto: custo, prazo e qualidade. 
+        Ou seja, queremos entregar produtos dentro de determinado custo, no prazo estabelecido e com a qualidade esperada pelo cliente. Para isso, boas 
+        estimativas se mostram essenciais.
+
+    Estimativa
+
+        Diferentemente do que muitos acreditam, o uso de métodos ágeis requer dedicação à estimativa, tanto em relação ao que se espera com respeito à 
+        evolução do produto como um todo ao longo do tempo quanto em relação ao que é possível ser entregue em cada sprint.

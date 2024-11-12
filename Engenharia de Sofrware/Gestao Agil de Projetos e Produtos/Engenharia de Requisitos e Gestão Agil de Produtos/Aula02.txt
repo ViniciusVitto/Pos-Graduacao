@@ -1,0 +1,77 @@
+Técnicas de elicitação de requisitos
+
+    Na elicitação de requisitos, é comum envolver diversos stakeholders do lado do cliente, e stakeholders podem sugerir outras pessoas que devem 
+    ser consultadas.
+
+    Durante a elicitação de requisitos, o analista de requisitos, ou product owner, deve trabalhar com os interessados para descobrir informações 
+    sobre o domínio e as funcionalidades, as características e as restrições do produto a ser construído.
+
+    Entrevistas
+
+        Algumas dicas para conduzir uma entrevista incluem preparar um roteiro para a entrevista e iniciar com perguntas abertas, assegurando captar 
+        o contexto geral do problema. Isso é relevante principalmente para as entrevistas iniciais com o cliente, visando a obter a visão do produto 
+        a ser construído e compreender os requisitos do usuário.
+
+        Nas entrevistas iniciais, o foco deve ser no problema e no contexto geral, e não nos detalhes de telas ou regras de negócio. Ou seja, em um 
+        primeiro momento, deve-se buscar entender o problema a ser resolvido, a solução atualmente adotada para tratar o problema, os benefícios 
+        esperados, os interessados a serem consultados e obter o entendimento inicial do escopo (requisitos do cliente) e das restrições organizacionais.
+
+        Os detalhes são normalmente capturados em entrevistas posteriores através de perguntas mais específicas com interessados diretamente envolvidos 
+        nessas atividades, incluindo os usuários finais, para detalhar os requisitos do usuário em requisitos do sistema. Esses detalhes incluem 
+        atividades e navegação, informações específicas e campos a serem apresentados, regras de negócio e de validação, exceções e outras informações 
+        relevantes.
+    
+    Brainstorming
+
+        Brainstorming (ou tempestade de ideias) é uma técnica básica para geração de ideias muito explorada na elicitação de requisitos, principalmente 
+        nas fases iniciais e quando o cliente não tem ainda uma visão clara das suas necessidades e/ou das possibilidades para tratá-las.
+
+        Resumindo o que deve ser feito durante uma sessão de brainstorming:
+
+            1- Estalecer um objetivo na sessão.
+            2- Gerar quantas ideias possiveis.
+            3- Deixar a imaginação livre.
+            4- Não existe críticas ou debates nas sessões.
+            5- Ajuste e combinação de ideias.
+
+    Questionários
+        
+        Questionários costumam ter aplicabilidade a mercados específicos, em que perguntas relevantes podem ser estabelecidas antecipadamente e aplicadas 
+        a um público-alvo bem definido.
+
+        Um risco na aplicação de questionários é o participante não interpretar a pergunta da maneira desejada. Além disso, a estrutura fixa dos 
+        questionários acaba suprimindo o potencial da análise.
+
+        Na análise de requisitos, o entendimento do problema é normalmente aprimorado ao longo do processo, permitindo mudar o direcionamento e até mesmo 
+        as perguntas, visando a chegar na melhor solução possível. Por isso, questionários tendem a só se mostrar úteis em certas situações e após certo 
+        entendimento inicial obtido, por exemplo, através de entrevistas.
+
+    Workshop de requisitos
+
+        O workshop de requisitos foi idealizado para encorajar o consenso acerca dos requisitos da aplicação em um curto intervalo de tempo. O workshop 
+        põe todos os stakeholders juntos por um período intensivo e focado para criar ou revisar as principais funcionalidades do sistema. O workshop é 
+        conduzido por um facilitador, que, ao longo do workshop, irá aplicar dinâmicas previamente planejadas, garantindo que todos tenham a sua vez de 
+        falar.
+
+        O workshop provê um ambiente para, conforme os objetivos e a necessidade, aplicar outras técnicas de elicitação. Uma das vantagens do workshop de 
+        requisitos é que os resultados refletem o consenso dos interessados e ficam imediatamente disponíveis. Além disso, ajuda na construção de espírito 
+        de cocriação em equipe.
+
+    Etnografia
+
+        Etnografia é uma técnica de observação que pode ser utilizada para compreender requisitos sociais e organizacionais. Nessa técnica, o analista 
+        se insere no ambiente de trabalho em que sistema será utilizado. O trabalho diário é observado, e tarefas reais em que os participantes estão
+        envolvidos são anotadas.
+
+        A técnica parte do pressuposto de que sistemas de software são utilizados dentro de um contexto social e organizacional e de que requisitos do 
+        sistema são derivados e/ou limitados por esse contexto. A ideia é capturar os processos reais em vez dos processos formais e detalhes que podem 
+        ser esquecidos em uma entrevista. Normalmente, a observação é aplicada após um primeiro entendimento do sistema a ser construído.
+    
+    Prototipação
+        
+        A técnica de prototipação visa a permitir descobrir quais são as reais necessidades dos usuários através do exame de um protótipo. A prototipação 
+        envolve um estudo preliminar dos requisitos do usuário, a construção de um protótipo e a avaliação desse protótipo junto aos usuários. No contexto 
+        da elicitação de requisitos, os protótipos servem apenas para demonstrar os requisitos e não envolvem esforços de implementação.
+
+        Nesse contexto, é comum construir protótipos de baixa fidelidade (também chamados de wireframes). Esses protótipos nada mais são do que desenhos 
+        das interfaces do sistema para validar a interação pretendida e as informações contidas, sem detalhes de acabamento.

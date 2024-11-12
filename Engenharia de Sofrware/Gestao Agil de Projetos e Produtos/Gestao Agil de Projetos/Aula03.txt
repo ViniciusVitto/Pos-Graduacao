@@ -1,0 +1,50 @@
+Produção just in time: Lean e Kanban
+
+    A produção just in time procura adequar a produção à demanda, fornecendo apenas o que é efetivamente encomendado e focando na eficiência, na 
+    produtividade e na redução de desperdícios. Dois métodos ágeis muito discutidos na atualidade e relacionados com esse conceito são lean e kanban.
+
+    LEAN
+
+        Lean é um método de produção que visa a reduzir continuamente os tempos de produção e de resposta de fornecedores e clientes, através de uma 
+        produção “enxuta” que foca na entrega de valor da perspectiva do cliente e na eliminação do desperdício.
+
+        O desenvolvimento de software lean pode ser resumido em sete princípios, muito semelhantes aos da produção lean tradicional. 
+
+            1. Eliminar desperdício - Se alguma atividade puder ser contornada ou o resultado puder ser alcançado sem ela, ela é considerada desperdício. 
+
+            2. Ampliar o aprendizado - O conhecimento adquirido deve ser compartilhado.
+
+            3. Adiar as decisões - Realize testes e experimentos antes de tomar decisões irreversíveis.
+
+            4. Entregar o mais rápido possível - Funcionalidades implementadas devem ser entregues o quanto antes.
+
+            5. Empoderar a equipe - O método lean segue o princípio ágil, de construir projetos em torno de indivíduos motivados, de dar a eles o 
+            ambiente e o suporte necessários e confiar neles para fazer o trabalho.
+
+            6. Construir com qualidade - Técnicas que permitam o controle da qualidade do produto devem ser incorporadas ao processo. 
+
+            7. Otimizar - O processo deve ser continuamente melhorado, visando a torná-lo o mais eficiente possível.
+
+    KANBAN
+        
+        O kanban permite controlar o fluxo de produção de forma visual e intuitiva, com foco na eficiência. No kanban, cartões visuais são usados para 
+        controlar o fluxo de produção utilizando o conceito de produção just in time, em que as tarefas são preparadas sob demanda para as atividades 
+        seguintes, caracterizando um sistema de produção baseado em pull. 
+
+        O quadro kanban é dividido em colunas. A primeira coluna representa o backlog do produto. No contexto de desenvolvimento de software, cada cartão 
+        tipicamente representa uma história de usuário, ou seja, uma funcionalidade que irá permitir a algum usuário realizar algo novo no sistema. As 
+        demais colunas são atividades que representam o fluxo de valor, ou seja, para transformar histórias do usuário em funcionalidades que agreguem 
+        valor para o cliente. Cada uma dessas colunas é dividida em duas, uma representando os cartões em andamento e outra representando os cartões 
+        concluídos.
+
+Métodos ágeis escalados
+
+    SAFe – framework ágil em escala
+        
+        SAFe (Scaled Agile Framework) é um framework para a aplicação do ágil em escala amplamente utilizado pelas organizações. Suas práticas estão 
+        disponíveis gratuitamente no seu website, formando uma base de conhecimento de princípios, práticas e competências comprovadas e integradas para 
+        alcançar a agilidade de negócios em escala.
+
+        A expressão “agilidade de negócios” significa que toda a organização está engajada em entregar soluções de negócio inovadoras, de forma contínua 
+        e proativa. Isso permite que a empresa seja mais competitiva, pois seus colaboradores são alocados às atividades da melhor forma possível, 
+        buscando a maximização do valor gerado pelos produtos entregues.
