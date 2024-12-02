@@ -1,0 +1,88 @@
+IHC: interação homem-computador
+
+    A aplicação da ergonomia em projetos de sistemas computacionais gera um debate sobre a interação humano-computador (IHC), área que estuda a interação 
+    entre homens e computadores. Uma interação é uma relação entre duas ou mais entidades em que cada ação de uma parte corresponde a uma reação das 
+    demais. A interação humano-computador ocorre por meio da interface com o usuário, formada pelo sistema computacional, composto por hardware e software.
+
+    O sistema deve mostrar ao usuário, de forma clara, quais ações são possíveis e como realizá-las. Além disso, seu feedback deve ser claro, para que o 
+    usuário possa compreendê-lo e dar continuidade à interação.
+
+    Esses objetivos são alcançados no design do sistema ou aplicativo quando são atendidos critérios de qualidade de uso, como: usabilidade, experiência 
+    do usuário, acessibilidade e responsividade.
+
+        Usabilidade - está relacionada com a facilidade de aprendizado e uso da interface, bem como com a satisfação do usuário em decorrência desses uso.
+
+        Experiência do usuário - está relacionada com os sentimentos e emoções dos usuários na interação.
+
+        Responsividade - para websites e web-apps,o designe responsivo se adequa automaticamente e em porcentagem, conforme a largura da tela.
+
+        Adaptabilidade - apresenta formato próprio, conforme a altura e largura da tela.
+
+        Acessibilidade - está relacionada com a remoção das barreiras que impedem mais usuários de serem capazes dde acessar a interface do sistema e 
+        interagirem com ele.
+
+Usabilidade de interface
+
+    A experiência do usuário é frequentemente definida como a sequência de interações entre um usuário e um sistema projetado para atender 
+    satisfatoriamente a suas necessidades e metas. O termo é conhecido pela sigla inglesa UX, abreviação de user experience.
+
+    Assim, a ISO 9241-11 (2002) explica como identificar a informação necessária a ser considerada na especificação ou avaliação de usabilidade de um 
+    computador em termos de medidas de desempenho e satisfação do usuário. É dada orientação sobre como descrever explicitamente o contexto de uso do 
+    produto (hardware, software ou serviços) e as medidas relevantes de usabilidade. A orientação é dada na forma de princípios e técnicas gerais.
+
+    A partir disso, explicam-se os principais conceitos:
+
+        - Eficácia: capacidade de executar uma tarefa de forma correta e completa.
+
+        - Eficiência: recursos gastos para conseguir ter eficácia, sejam eles tempo, dinheiro, produtividade ou memória.
+
+        - Satisfação: conforto na execução da tarefa.
+
+Diferenças no design da interface desktop e mobile
+
+    Compreender as características específicas do design para aplicativos é fundamental para guiar seus projetos. Uma dessas características é que a 
+    experiência em dispositivos móveis (mobile), em que os aplicativos são implementados, é muito diferente daquela em computadores de mesa (desktop).
+
+            Desktop VS. Mobile
+
+            - Contexto de uso;                  - Modos de interação;
+            - Tamanho de tela;                  - Ambiente físico (indoors, externo, on the move...);
+            - Tamanho do dispositivo;           - Tempo para executar a tarefa (Chances de ser interrompido).
+            - Conexão com a internet;
+            
+            Diferenças marcantes referentes ao contexto de uso, no qual há muitas variações, dependendo de onde o usuário está quando usa o dispositivo,
+            do curto prazo para concluir a atividade, da presença e interação com outras pessoas, os ruídos, distrações e características do ambiente
+            físico.
+
+Design responsivo e adaptativo
+
+                              |----------→ iOS
+             |----------→   Nativo      
+             |                |----------→ Android
+             |        
+    Aplicativo
+             |
+             |              |----------→ Responsivo
+             |----------→  Web                                                                  
+                            |----------→ Adaptado      
+
+    Aplicativo nativo                       VS                       Aplicativo web
+
+    - Ocupa espaço de armazenamento.                                - É difícil adaptar o website para uso
+    - É necessario adequação para cada                              em um número crescente de navegadores,
+    sistema e dispositivo.                                          sistemas operacionais e dispositivos.
+    - No iOS, uso do ambiente de desen-                             - Redirecionamento para a versão específica
+    volvimento iOS SDK tem custo. No                                do website parra atender a diferentes 
+    Android, é gratuito, mas há custo                               navegadores, sistemas operacionais e     
+    na publicação inicial.                                          dispositivos.
+    - No iOS, há um processo longo para                             - Uso limitado das funcionalidades do
+    aprovar e publicar o aplicativo                                 dispositivo.
+    Apple Store. No Google Play, é 
+    rápido, mas há risco de vírus.
+    - Seu aplicativo compete na loja 
+    com concorrentes, dificultando que
+    seja encontrado pelo usuário.
+    - Para cobrar do usuário pelo uso,
+    ddeve-se pagar uma taxa à loja.                       
+    
+                                                         
