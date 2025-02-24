@@ -1,0 +1,65 @@
+Comunicação e troca de dados (data exchange)
+
+    Estilos de comunicação
+
+        Uma das primeiras decisões a serem tomadas durante o processo de planejamento e desenvolvimento de uma API é relativa ao estilo de comunicação que será implementado. 
+        Quando falamos de estilos de APIs, falamos de estilos de arquitetura das “pontes”. Os dois estilos mais comuns atualmente são o SOAP e o REST. Um outro, que vem 
+        ganhando espaço e poderá assumir um possível posto de liderança, é o GraphQL.
+
+            SOAP - é um protocolo de comunicação que padroniza as estruturas de requisição e de resposta.
+
+            REST - é um padrão mais aberto que oferece várias opções de uso, mas que deuxa muitas decisões a cargo de quem está projetando a aplicação.
+
+            GraphQL - vem com uma proposta completamente diferente, permitindo à aplicação cliente liberdade na escolha de qual informação deseja receber do servidor por meio
+            de uma linguagem própria para a criação de consultas.
+
+        Desde então, muitas outras propostas de estilos de arquitetura para APIs surgiram, como: RPC (Remote Procedure Call), SOAP (Simple Object Access Protocol), 
+        REST (Representational State Transfer) e GraphQL. Cada uma dessas propostas definia um novo padrão ou protocolo de troca de mensagens, com suas vantagens e 
+        desvantagens em termos de recursos, desempenho, segurança e complexidade.
+
+        RPC
+            
+            O objetivo principal do RPC é permitir a comunicação entre sistemas distribuídos e heterogêneos, em que os componentes podem ser implementados em diferentes 
+            linguagens de programação e diferentes plataformas.
+
+            A lógica do RPC é bem simples: um cliente pode solicitar que um servidor execute uma função ou procedimento remoto e receber os resultados de volta. Junto com 
+            essa solicitação, também são enviados os parâmetros necessários para sua execução. Nessa comunicação, tanto o servidor quanto o cliente irão fazer chamadas, e o 
+            que vai diferenciá-las são os parâmetros enviados. Um não precisa conhecer detalhes técnicos sobre como o outro foi implementado, mas é vital que seja capaz de 
+            entendê-lo.
+
+        XML-RPC e JSON-RPC
+
+            O XML-RPC é uma das primeiras variações do padrão RPC que o implementa, utilizando o XML para a codificação de suas chamadas e o HTTP como mecanismo de transporte.
+            O XML é conhecido por ser muito verboso, ou seja, permite muito texto para pouca informação útil, representando um gasto, que pode ser excessivo, de espaço em 
+            memória. Quanto maior for o corpo da mensagem, maior pode ser o número de pacotes a serem transmitidos (mais lento será o completo envio de uma mensagem) e maior 
+            será o tempo gasto processando toda a informação.
+
+            Para reduzir o tamanho da informação a ser transportada, surge, uma nova variação de implementação do RPC, utilizando JSON para a codificação das chamadas: JSON-RPC.
+            O formato da informação em JSON é bem menos verboso, o que, consequentemente, reduz o tamanho dos dados a serem transportados. 
+        
+        SOAP
+
+            O SOAP define a forma de codificar objetos em formato XML e enviá-los pela rede usando protocolos como HTTP e SMTP (Simple Mail Transfer Protocol). O uso do 
+            protocolo SMTP para o SOAP não é comum hoje, por não ter sido projetado para lidar com estruturas de dados complexas em XML, algo que pode tornar a codificação e 
+            decodificação de mensagens SOAP propensa a erros. Além disso, o SMTP não oferece suporte a recursos avançados de segurança, como criptografia de ponta a ponta, 
+            o que pode comprometer a privacidade dos dados em trânsito. Por último, também pode haver problemas de escalabilidade, uma vez que o SMTP não é otimizado para a 
+            transmissão de grandes volumes de dados.
+
+        REST
+
+            A proposta era que a escalabilidade da web fosse governada por um conjunto de requisitos-chaves (key constraints). A continuidade da expansão seria possível se cada 
+            uma dessas restrições fosse atendida de forma igual. Essas restrições/limitações continuam atuais, pois os conceitos ainda são válidos, e devem ser observadas e 
+            atendidas no desenvolvimento de todo e qualquer sistema web. 
+
+            Com isso, o REST é um estilo fortemente focado na ideia de recursos, ao contrário do SOAP e do RPC, que utilizam comandos para manipular o servidor. Um recurso é um 
+            dado real, que está acessível ou é gerado pelo servidor. Por esse motivo, o REST é um padrão que faz uso do protocolo HTTP e dos métodos GET, POST, PUT e DELETE 
+            para a manipulação de recursos.
+        
+        GraphQl
+    
+            O GraphQL é baseado em esquemas de tipos e usa consultas para obter informações específicas de um servidor. Isso significa que, em vez de fazer várias solicitações 
+            para diferentes recursos e obter mais informações do que o necessário, o cliente pode especificar exatamente quais dados deseja em uma única consulta GraphQL.
+
+            O GraphQL também oferece recursos adicionais, como introspecção de esquema e tipagem de dados, que podem tornar mais fácil para os desenvolvedores entender e 
+            interagir com uma API. Sobre a tipagem de dados, fornece uma estrutura para descrever os tipos de dados disponíveis na API e as operações que podem ser executadas 
+            neles, permitindo uma documentação clara e consistente da API.

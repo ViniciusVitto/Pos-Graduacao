@@ -1,0 +1,34 @@
+Teste e publicação
+
+    Testes no desenvolvimento de uma API
+
+        Quando o assunto é desenvolvimento de APIs, existe uma série de testes específicos que visam a avaliar e validar a coerência, a corretude, a performance, a usabilidade 
+        e a segurança da solução desenvolvida.
+
+        Testes unitários
+
+            Os testes unitários, ou testes funcionais, visam a verificar o comportamento individual de unidades isoladas de código, como funções, métodos ou classes. Eles 
+            garantem que cada unidade funcione corretamente de acordo com suas especificações. No cenário das APIs, também podemos incluir como teste de unidade os testes de 
+            rotas – a implementação de uma rota como uma unidade isolada de código.
+
+        Testes de integração
+
+            Quando o objetivo é verificar de fato o comportamento de um sistema quando integrado a uma aplicação externa real, utilizaremos os testes de integração. Nesse tipo 
+            de teste, temos um escopo maior de atuação e testamos a interação entre as diferentes partes da API e suas dependências externas, como bancos de dados, serviços web 
+            ou outras APIs. Esses testes garantem que os componentes da API se comuniquem corretamente e que as integrações externas estejam funcionando conforme o esperado.
+        
+        Testes de aceitação
+
+            Quando queremos verificar se a API atende aos requisitos e aos comportamentos esperados pelo usuário final, fazemos testes de aceitação, também conhecidos como 
+            testes funcionais ou testes de aceitação do usuário. Esses testes são escritos do ponto de vista do usuário e testam os fluxos de uso principais da API para 
+            garantir que ela funcione corretamente em cenários reais de uso. Esses cenários reais são geralmente escritos junto com cliente ou com seus representantes.
+
+        Testes de carga
+
+            Já os testes de carga e desempenho avaliam a capacidade da API de lidar com cargas de trabalho intensas e medem seu desempenho sob condições de alto tráfego. Eles 
+            ajudam a identificar gargalos de desempenho, tempos de resposta lentos e limites de escalabilidade, permitindo otimizações e ajustes adequados.
+
+        Teste de segurança
+
+            Por fim, os testes de segurança avaliam a resistência da API a ameaças de segurança, como injeção de código, ataques de negação de serviço, autenticação inadequada, 
+            entre outras. Eles garantem que a API esteja protegida contra vulnerabilidades conhecidas e cumpra as melhores práticas de segurança.

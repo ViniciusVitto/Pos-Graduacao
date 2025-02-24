@@ -1,0 +1,71 @@
+Padrões arquiteturais
+
+    Conceitos básicos
+
+        A arquitetura de software é um conjunto de decisões de projeto que se refere ao planejamento da estrutura geral e organização de um sistema de software. A arquitetura 
+        estabelece a maneira como os componentes do software são projetados, organizados e interagem entre si. Usualmente, a concepção de uma arquitetura de software não parte 
+        do zero. Uma vez definidos os requisitos do sistema, uma das primeiras decisões de projeto é a escolha de um padrão predefinido que guiará a definição da arquitetura 
+        de software.
+
+            Padrão arquitetural
+
+                É um conjunto de decisões de projeto que define um esquema geral de organização estrutural de sistemas de software. Tal esquema é uma solução para resolução
+                de problemas recorrentes no projeto de sistemas de software. Esse esquema é usualmente definido em termos de elementos e suas relações entre si, bem como as
+                restrições que governam esses elementos e relações.
+
+    Arquitetura cliente-servidor
+
+        No padrão arquitetural cliente-servidor, a computação é dividida entre várias máquinas. A topologia desse padrão determina que componentes em uma máquina servidor 
+        forneçam funcionalidades para componentes em várias máquinas clientes por meio de uma conexão de rede. O servidor centraliza recursos computacionais, que podem ser 
+        compartilhados por muitos usuários, e os clientes desses recursos podem permanecer relativamente simples. Na topologia cliente-servidor, o cliente é quem invoca as 
+        funcionalidades disponibilizadas pelo servidor.
+
+        Vantagens
+
+            - O armazenamento de dados e a lógica de negócios ficam centralizados no servidor, o que facilita o gerenciamento e a manutenção da aplicação.
+            - Há centralização das medidas de segurança, uma vez que os servidores podem controlar a autenticação de usuários, o acesso e a criptografia dos dados.
+            - O sistema tem certa escalabilidade, pois se podem adicionar ou remover clientes e servidores conforme a demanda.
+        
+        Desvantagens
+
+            - Possível sobrecarga do servidor em cenários em que clientes enviam varias requisições simultaneamente.
+            - A disponibilidade pode ser limitaddda, pois depende diretamente da confiabilidade dda conexão de rede entre os clientes e o servidor.
+            - O custo em torno de infraestrutura robusta de servidores pode ser alto.
+
+    Padrão arquitetural em camadas
+
+        O padrão arquitetural em camadas é um dos mais conhecidos e utilizados no desenvolvimento de aplicações web. Também é utilizado em inúmeros domínios e situações, 
+        variando de sistemas empresariais e aplicações desktop a sistemas distribuídos, máquinas virtuais e modernizações de sistemas legados. Esse padrão é composto por um 
+        conjunto de duas ou mais camadas, organizadas hierarquicamente, que se comunicam entre si. Cada camada tem uma atribuição específica e apenas se comunica com as 
+        subjacentes por meio de interfaces bem definidas.
+
+    Padrão modelo-visualização-controlador (MVC)
+
+        Uma variante do padrão em camadas, muito utilizada, é o padrão modelo-visualização-controlador (MVC). A ideia do padrão MVC é separar o projeto em três camadas lógicas 
+        e independentes: o modelo (manipulação da lógica de dados), a visualização (interface do usuário) e o controlador (fluxo de aplicação). A separação tem o objetivo de 
+        facilitar a manutenção da aplicação e fornecer sua reutilização em projetos futuros.
+
+        Por meio da separação explícita das três camadas, esse padrão oferece aos desenvolvedores a capacidade de trabalhar de forma mais independente, especialmente no que diz 
+        respeito à manipulação da informação pelo programa e às representações das interações do usuário com essa informação. A estrutura MVC fornece outros benefícios, como a 
+        facilidade de manutenção pela separação e o reuso de partes da aplicação, mesmo para projetos futuros. O projeto que segue esse padrão também fornece um código mais 
+        testável, pois, além de o código ser mais granular, as diferentes camadas podem ser expostas a diferentes massas de teste com diferentes objetivos. É, também, 
+        relativamente fácil ter múltiplas visualizações do mesmo modelo, que, inclusive, podem ser habilitadas ou desabilitadas em tempo de execução.
+
+    Arquitetura orientada a serviços (SOA)
+
+        A arquitetura orientada a serviços (SOA) é um padrão arquitetural em que os sistemas são construídos em termos de uma coleção de serviços independentes. Um serviço pode 
+        ser qualquer funcionalidade que conclui uma ação e fornece um resultado específico, como o processamento de pedidos de clientes ou a produção de um relatório de itens 
+        em estoque. Os serviços são combinados para criar novos sistemas.
+
+    Microsserviços
+
+        O padrão baseado em microsserviços promove a construção de um sistema como um conjunto de microsserviços autônomos e independentes, isto é, que são executados como 
+        processos separados e podem ser implantados e dimensionados de forma independente. Cada microsserviço é um serviço de granularidade fina, modelado em torno de um domínio 
+        de negócios. De acordo com o padrão, cada microsserviço também deveria ter seu próprio esquema independente de dados, propiciando um desacoplamento ainda maior dos outros 
+        microsserviços disponíveis na arquitetura.
+
+    Padrões de arquitetura orientada a eventos
+
+        A arquitetura orientada a eventos é um padrão em que a comunicação entre os componentes é centrada na ocorrência de eventos. Os eventos representam alterações no estado do 
+        sistema, determinadas ações, entradas de dados dos usuários ou, mesmo, outras ocorrências relevantes. Os tipos de eventos são os mais variados possíveis, a depender do 
+        domínio e dos objetivos do sistema.
