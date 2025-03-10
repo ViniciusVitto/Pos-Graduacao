@@ -1,0 +1,78 @@
+Implementando uma arquitetura de microsserviços
+
+    1 - Implementando a comunicação entre microsserviços.
+    2 - Fluxos de trabalho em conjuntos de microsserviços.
+    3 - Build, implantação e testes de sistemas baseados em microsserviços.
+    4 - Monitoramento e observabilidade.
+    5 - Segurança, resiliência e escalabilidade.
+
+    Comunicação entre microsserviços
+
+        Acertar a comunicação entre microsserviços é difícil para muitas pessoas. Isso se dá devido, em grande parte, ao fato de que elas gravitam em direção a uma abordagem 
+        tecnológica escolhida a priori, sem primeiro considerar os diferentes tipos de comunicação que podem fazer sentido em cada lugar da aplicação. De modo geral, existem 
+        mecanismos de comunicação síncronos bloqueantes e assíncronos não bloqueantes. 
+
+    Fluxo de trabalhos
+
+        Quando se trata de permitir que vários microsserviços trabalhem juntos, como na implementação de um processo de negócios, a tarefa de modelar e implementar esses 
+        fluxos de trabalho colaborativos em sistemas distribuídos pode ser desafiante. As transações de banco de dados geralmente se referem a transações ACID 
+        (atomicidade, consistência, isolamento e durabilidade). Essas propriedades garantem a confiabilidade e a integridade do sistema de armazenamento de dados.
+
+            Atomicidade -  Garante que todas as operações dentro de uma transação sejam concluídas com sucesso ou nenhuma delas entre em vigor. Se alguma alteração falhar,
+            todas a transação será revertida, deixando o banco de dados inalteraddo.
+            
+            Consistência - Garante que o banco de dados permaneça em um estado válido e consistente após a execução de uma transação, obedecendo a regras e restrições 
+            predefinidas.
+
+            Isolamento - Permite que várias transações operem simultaneamente sem haver interferência entre elas. Alterações temporárias feitas em uma transação são isoladas
+            de outras transações até que as alterações sejam confirmadas.
+
+            Durabilidade - Garante que, uma vez que uma transação seja confirmada e concluída, suas alterações sejam permanentemente armazenadas e protegidas contra falhas ou
+            travamento do sistema.
+
+    Build, implantação e teste de sistemas baseados em microsserviços
+
+        Integração contínua
+
+            A integração contínua (CI – continuous integration) é uma prática bem estabelecida que garante a frequente integração e sincronização de código entre 
+            desenvolvedores. A integração contínua consiste em realizar frequentemente o merge das alterações de código em um repositório compartilhado, e validá-las 
+            automaticamente por meio de compilações e testes automatizados.
+        
+        Pipelines de build
+            
+            As pipelines de build envolvem a divisão do processo de build em vários estágios para melhorar a eficiência e fornecer valioso feedback no processo. Essa abordagem 
+            é particularmente útil ao lidar com diferentes tipos de testes, como testes rápidos e de escopo pequeno versus testes lentos e de escopo grande
+
+        Entrega contínua e implantação contínua
+
+            Dado que temos uma pipeline de build que roda cada vez que integramos alguma implementação nova de nosso microsserviço, se nesse processo há implantação automática 
+            das alterações em produção, então estamos realizando o que é chamado de implantação contínua (continuous deploy).
+
+    Monitoramento e observabilidade
+
+        Aqui, vamos apenas indicar alguns caminhos sobre como conseguir atingir um adequado monitoramento de um sistema baseado em microsserviços em direção à observabilidade. 
+
+            Instrumentação adequada - É crucial adicionar métricas, logs e rastreamento distribuído aos microsserviços para coletar dados significativos sobre o desempenho e 
+            o comportamento do sistema
+
+            Centralização de logs e métricas - Consolidart logs e métricas de todos os microsserviços em uma plataforma centralizada facilita a análise e o monitoramento do
+            sistema como um todo.
+
+            Monitoramento em tempo real - Estabelecer alertas e painéis de monitoramento - dashboard - em tempo real ajuda a identificar problemas imediatamente e tomar
+            medidas corretivas antes que afetem os usuários finais.
+
+            Técnicas de rastreamento distribuído - Utilizar técnicas de rastreamento distribuído, como correlação de solicitações entre microsserviços, permite entender o 
+            fluxo de uma solicitação ao longo do sistema e identificar gargalos e problemas de desempenho.
+
+            Análise de dados e aprendizado de máquina - Utilizar técnicas de análise de dados e aprendizado de maquina para identificar padrões e anomalias, além de prever
+            possíveis problemas, pode melhorar a capacidade de resposta e a estabilidade do sistema.
+
+    Segurança, resiliência e escalabilidade
+
+        Os princípios essenciais de segurança que podem ser genericamente mais aplicáveis em qualquer sistema, principalmente aqueles baseados em microsserviços, são:
+
+            Princípio do privilégio mínimo - É importante conceder aos usuários e componentes do sistemas apenas os privilégios necessários para realizar suas funções.
+
+            Defesa em profundidade - Envolve a aplicação de camadas múltiplas de segurança para proteger o sistema.
+
+            Automação - Desempenha um papel vital na implementação de medidas de segurança consistentes e confiáveis.

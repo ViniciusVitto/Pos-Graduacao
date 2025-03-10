@@ -1,0 +1,52 @@
+Introdução à arquitetura de microsserviços
+
+    O que são microsserviços?
+
+        Os microsserviços são serviços modelados em torno de um domínio de negócios que podem ser lançados e implantados ​​independentemente. Eles são um tipo de arquitetura 
+        orientada a serviços, embora tenham 'opiniões fortes' sobre como os limites de cada serviço devem ser traçados e nos quais a capacidade de implantação independente 
+        é fundamental.
+
+        Principais conceitos relacionados com os microsserviços
+
+            - Implatação independente
+            - Modelagem sobre um domínio de negócios
+            - Gerenciamento do próprio estado
+            - Tamanho do microsserviços
+            - Flexibilidade
+            - Alinhamento de arquitetura com organização
+
+    Como projetar microsserviços
+
+        Microsserviços são essencialmente um tipo de decomposição modular que envolve interação entre modelos baseada em rede, criando desafios adicionais. Assim, felizmente 
+        existe uma ampla base de conhecimento existente sobre modularização de software e programação estruturada que podemos aproveitar para nos ajudar a definir os limites 
+        entre os microsserviços. Nesse sentido, exploraremos três conceitos cruciais que mencionamos anteriormente. Compreender esses conceitos é vital para determinar o que 
+        constitui uma fronteira eficaz de microsserviço. Os três conceitos são ocultação de informação, coesão e acoplamento.
+
+        Ocultação de informação
+
+            Basicamente, a ocultação de informações visa a esconder detalhes complexos dentro de um limite de módulo/componente ou microsserviço.  A ocultação de informação 
+            também permite que os módulos sejam analisados e entendidos em isolamento, o que facilita compreender o que o sistema realiza como um todo. Além disso, os módulos 
+            podem ser modificados independentemente uns dos outros, permitindo que a funcionalidade do sistema seja alterada sem a necessidade de mudar outros módulos. Outra 
+            vantagem é permitir que os módulos sejam combinados de maneiras diferentes para entregar novos tipos de funcionalidade.
+        
+        Coesão
+
+            Coesão se refere ao grau no qual os elementos dentro de um componente ou módulo estão inter-relacionados e compartilham um objetivo comum. Um módulo com alta coesão
+            é composto por componentes que estão intimamente ligados e servem a um propósito comum.
+
+        Acoplamento
+
+            O baixo acoplamento entre serviços é crucial em uma arquitetura de microsserviços. Ele garante que uma alteração em um serviço não exija alterações em outros,
+            permitindo a implantação independente. O acoplamento forte, por sua vez, resulta de estilos de integração que unem os serviços, exigindo que modificações em um 
+            serviço sejam refletidas em seus consumidores. 
+            
+            O acoplamento de domínio descreve uma situação em que um microsserviço precisa interagir com outro microsserviço, porque o primeiro microsserviço precisa usar a 
+            funcionalidade que o outro fornece. 
+
+            Acoplamento de passagem descreve uma situação na qual um microsserviço passa dados a outro microsserviço somente porque esses dados serão requeridos por outro 
+            microsserviço que será chamado mais para frente na cadeia de interação entre os microsserviços.
+
+            No acoplamento comum, dois microsserviços compartilham um conjunto de dados. Esse tipo de acoplamento acontece, por exemplo, quando dois microsserviços utilizam 
+            o mesmo banco de dados ou o mesmo sistema de arquivos, ou memória compartilhada.
+
+            O acoplamento de conteúdo acontece quando um serviço chamador acessa dados internos de um microsserviço chamado e muda o seu estado interno.

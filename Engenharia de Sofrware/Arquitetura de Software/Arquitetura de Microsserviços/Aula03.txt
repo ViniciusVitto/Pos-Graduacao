@@ -1,0 +1,69 @@
+Aspecto humano na arquitetura de microsserviços
+
+    Interfaces com o usuário
+
+        O mundo das interfaces de usuário ainda precisa ser discutido em detalhes. Embora alguns desenvolvedores possam oferecer interfaces de programação de aplicativos, 
+        a seus clientes, muitos visam a criar interfaces visualmente atraentes e funcionais, que melhorem a experiência do usuário. A interface do usuário serve como ponte 
+        para integrar vários microsserviços em um sistema coerente para os clientes.
+
+        Com o tempo, o JavaScript ganhou popularidade por adicionar comportamento dinâmico a interfaces nos navegadores, diminuindo as diferenças entre aplicativos da web 
+        e desktop. O surgimento de aplicativos móveis diversificou ainda mais a entrega de interfaces gráficas com o usuário, resultando em uma infinidade de plataformas e 
+        tecnologias disponíveis hoje. Essa variedade apresenta aos desenvolvedores inúmeras opções para criar interfaces de usuário eficazes, apoiadas por microsserviços no 
+        servidor.
+
+        Ao aproveitar os recursos expostos pelos microsserviços de diferentes maneiras, as organizações podem personalizar experiências exclusivas para clientes em aplicativos 
+        de desktop, dispositivos móveis, dispositivos vestíveis e, até mesmo, locais físicos, como lojas físicas. As interfaces do usuário servem como pontos de integração, em 
+        que esses recursos são combinados para oferecer uma experiência coesa ao usuário.
+
+        O aspecto organizacional - Precisamos determinar a propriedade e as responsabilidades dentro da organização para fornecer interfaces de usuários.
+
+        O aspecto de implementação - Podemos explorar um conjunto de padrões que podem ser empregados para implementar essas interfaces de forma eficaz.
+
+    Desafios técnicos
+
+        Ao longo dos anos, o desenvolvimento da interface do usuário apresentou evoluções fascinantes, passando de interfaces baseadas em terminais de tela verde para 
+        aplicativos de desktop avançados, depois para interfaces da web e agora abrangendo experiências móveis nativas.
+
+        De certa forma, fechamos o círculo, pois os aplicativos clientes modernos exibem complexidade e sofisticação que rivalizam com os aplicativos de desktop do passado. 
+        Embora certos controles de interface do usuário, como botões, caixas de seleção e formulários, tenham se mantido constantes, a tecnologia subjacente usada para criar 
+        interfaces gráficas de usuário evoluiu.
+
+        Padrão: front-end monolítico
+
+            O padrão front-end monolítico ilustra uma abordagem arquitetônica em que a interface do usuário (UI) gerencia todo o estado e o comportamento, enquanto utiliza 
+            microsserviços de apoio para recuperar dados ou executar as operações necessárias.
+
+            O padrão de front-end monolítico é comumente usado no desenvolvimento de aplicativos de página única (SPAs), principalmente quando há uma equipe dedicada de 
+            front-end envolvida. Os microsserviços nesse padrão se concentram no compartilhamento de informações em um formato facilmente interpretável pela interface do 
+            usuário, geralmente usando JSON para interfaces baseadas na web. A interface do usuário é responsável por criar componentes de interface, gerenciar a sincronização 
+            de estado com o back-end e manipular dados textuais recebidos de microsserviços.
+        
+        Padrão: micro front-ends
+
+            A abordagem de micro front-end é um padrão organizacional que permite que diferentes seções de um front-end sejam desenvolvidas e implantadas de forma independente. 
+            É definido como um estilo de arquitetura em que aplicativos de front-end entregues separadamente são combinados para criar um sistema unificado. Esse padrão se 
+            torna crucial para as equipes que buscam ter a responsabilidade de ponta a ponta dos microsserviços de back-end e da interface do usuário correspondente. Enquanto 
+            os microsserviços oferecem implementabilidade independente para a funcionalidade de back-end, os micro front-ends fornecem o mesmo para essa camada da aplicação.
+        
+        Padrão: gateway agregador
+
+            Essencialmente, um gateway de agregação atua como um hub centralizado, conectando interfaces de usuário externas com os microsserviços chamados. Ele filtra e 
+            combina com eficiência as chamadas feitas por todas as interfaces de usuário. Ao habilitar a agregação, a interface do usuário pode evitar fazer várias chamadas 
+            para recuperar as informações necessárias, reduzindo assim o desperdício de dados recuperados, mas não utilizados.
+
+        Padrão: back-end para front-end
+
+            É projetado para uma interface de usuário específica, servindo a um único propósito. Essa abordagem demonstrou um sucesso notável ao atender às necessidades
+            exclusivas de interfaces de usuário, conforme demonstrado por sua implementação eficaz em organizações como SoundCloud e REA.
+
+    Estruturas organizacionais e microsserviços
+
+        O arquiteto evolutivo
+
+            O arquiteto é responsável por garantir uma visão técnica coesa para um sistema, atendendo às necessidades tanto dos clientes quanto dos desenvolvedores. Seja 
+            trabalhando com uma única equipe ou coordenando várias equipes em uma organização, o papel do arquiteto de software é fundamental para garantir a qualidade dos 
+            sistemas e das condições de trabalho e a capacidade de uma organização de se adaptar às mudanças.
+
+            A arquitetura de software deve se concentrar em entender o sistema como um todo e garantir uma visão arquitetônica adequada, que possa se adaptar às mudanças. O 
+            conceito de 'arquitetura' no desenvolvimento de software trata dos aspectos importantes de um sistema que são difíceis de mudar. É uma construção social (no sentido 
+            de envolver vários interessados) que depende do consenso do grupo sobre quais partes do software são importantes.

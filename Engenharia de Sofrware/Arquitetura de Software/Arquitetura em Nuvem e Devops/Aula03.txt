@@ -1,0 +1,44 @@
+Terceira maneira (aprendizado): gestão de mudanças e DevSecOps
+
+    A terceira maneira é fundamental para que a cultura DevOps esteja presente e preservada nos times. Sem ela, a cultura de automação e colaboração vai se enfraquecendo ao 
+    longo do tempo. A automação é uma jornada e identificar onde estão os gargalos e os alvos de automação requer muita colaboração e transparência. Temos que habituar os times 
+    em que trabalhamos a melhorar continuamente até a perfeição. Porém, como a perfeição não existe, a melhoria contínua não deve ter fim.
+
+    As práticas de aprendizagem multidisciplinares da terceira maneira demandam cada vez mais profissionais DevOps especialistas-generalistas. Esses profissionais devem 
+    conhecer e ter experiência em diversas áreas e se especializar naquelas com que se identificam mais.
+
+    Automações
+
+        Melhor organização e colaboração entre os profissionais - Com a automação, cria-se uma cultura de independência durante a realização das atividades, principalmente as 
+        que envolvem Dev e Ops.
+
+        Definição de níveis de acesso adequada - Com a automação, cada profissional tem o perfil adequado, sem a necessidade de acesso direto à máquina de produção ou 
+        homologação, evitando confusões e ruídos de comunicação.
+
+        Maior controle de horas e lead-time (tempo total de entrega ao cliente) - Com a automação, as métricas são criadas de forma automática, gerando mais confiabilidade para 
+        melhorias e análises de causa-raiz.
+
+        Redução de custos e aumento de produtividade - Com a automação de processos repetitivos, há mais produtividade, qualidade e menos retrabalho. Os times ficam focados e 
+        motivados por trabalhar em tarefas que exigem mais criatividade. Além disso, há ferramentas específicas que detectam vulnerabilidades de segurança e falta de qualidade 
+        mínima do código.
+
+        Gerenciamento mais inteligente - O gestor consegue criar relatórios gerenciais com poucos cliques para acompanhar os processos, facilitando a tomada de decisões em 
+        tempo hábil.
+    
+    Automatizar atividades em software
+
+        Em vez de utilizar documentos estáticos, que normalmente não são atualizados, é melhor realizar a documentação no próprio código ou pela IDE. Os engenheiros da General 
+        Eletrics, por exemplo, criaram o conceito de ArchOps, em que os diagramas são automatizados e atualizados dinamicamente. Assim, qualquer pessoa do time pode ter uma 
+        visão clara das decisões arquiteturais.
+
+    Código-fonte e configurações em um repositório único
+        
+        Mesmo usando microsserviços, em que os repositórios são separados, a ideia, aqui, é que todos tenham acesso a todo o código (mesmo que estejam em repositórios diferentes). 
+        É importante que todos compreendam o todo (produto completo), e não apenas uma parte específica. Tanto o código-fonte como as configurações de infra devem estar nesse 
+        repositório, com os padrões de testes e segurança e as configurações da pipeline de implantação e integração contínua utilizada. Padrões de codificação e tutoriais 
+        também podem estar no repositório ou em uma wiki, que normalmente é versionada.
+    
+    Testes automatizados como documentação
+
+        Quando são criados testes automatizados, documentam-se exemplos (regras de negócios) de como a aplicação deve funcionar (uma fonte rica das entradas e saídas possíveis 
+        de cada ponto de comunicação do software). A participação de um especialista em qualidade potencializa a completa cobertura e priorização dos testes automatizados.

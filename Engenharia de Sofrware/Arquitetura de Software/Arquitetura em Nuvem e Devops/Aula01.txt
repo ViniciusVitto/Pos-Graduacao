@@ -1,0 +1,55 @@
+Introdução e DevOps: primeira maneira
+
+    Overview do DevOps
+
+        O objetivo do DevOps é tornar os processos mais simples, integrar desenvolvedores e profissionais de infraestruturas, unir equipes e aumentar as entregas aos clientes, 
+        agregando velocidade e qualidade a elas. 
+
+            Primeira maneira -> Acelerar o fluxo da esqueda para a direita.      Dev ----> Ops
+            Seunda maneira -> Rápido feedback em todos os estágios do fluxo.     Ops <---- Dev
+            Terceira maneira -> Cultura de alta confiança e aprendizado.         Dev Ops <---> Ops Dev
+
+        Jornada DevOps
+
+            - Cultura colaborativa, facilitação, transparência e confiança
+            - Lean, Scrum, definição de pronto, kanban, XP, kata e teoria das restrições
+            - Integração contínua, entrega contínua e implantação contínua
+            - Telemetria, experimentação, feedback contínuo e testes A/B
+            - Microsserviço, APis, infraestrutura como código, releases de baixo risco e injeção de falhas
+            - Pipeline de implantação automação de testes e TDD
+            - Revisão de código, programação em pares, gestão de mudança e segurança contínua
+    
+        DevOps: primeira maneira
+
+            A primeira maneira tem como objetivo acelerar o fluxo do desenvolvimento (esquerda) para operações e clientes (direita) com o uso de diversas técnicas, ferramentas,
+            abordagens. O objetivo está na entrega de valor para o cliente, levando em consideração o fluxo de toda a organização e não os fluxos de cada departamento, desde a 
+            concepção (início da solicitação do cliente) até o valor a ser entregue. Com esse mapeamento, é possível identificar, ao longo desse fluxo, desperdícios e 
+            oportunidades de automação, para que, cada vez mais, se tenha um lead time (tempo de entrega ao cliente) competitivo e sem perder a qualidade.
+
+            Temos alguns princípios e práticas que apoiam o alcance desse primeiro objetivo da Jornada DevOps:
+
+                Focar o que realmente importa - Limitar o trabalho em execução utilizando o conceito do método Kanban. Com essa prática, é possível focar o que realmente 
+                importa, garantindo mais qualidade, pois o time está mais focado em uma única tarefa/projeto do que em diversas(os) que nunca conclui. Terminar mais tarefas 
+                do que começar novas.
+
+                Tornar o trabalho visível - Por meio da gestão visual, é possível aumentar o fluxo de trabalho e favorecer o autogerenciamento. Todos conseguem visualizar o que
+                precisa ser feito, qual a prioridade e para quando, ou até mesmo se alguém precisa de ajuda.
+
+                Automatizar processos manuais repetitivos - Automatizando processos manuais repetitivos com tarefas automatizadas, que antes eram manuais, é possível liberar as 
+                pessoas envolvidas para atuarem em atividades de mais valor para o cliente. Vale automatizar tudo o que for possível, sejam testes, deploys, levantamento de 
+                ambientes e máquinas virtuais ou artefatos de conformidade.
+
+                Identificar e remover desperdícios - Sejam eles em código, infra e/ou processos – muitas vezes, temos em nosso fluxo de trabalho passos desnecessários, que, se 
+                identificados e removidos, podem agilizar ainda mais o fluxo.
+
+                Preocupar-se com a qualidade - Preocupar-se com a qualidade desde o início do fluxo de trabalho, para evitar que erros aconteçam e gerem atrasos e gargalos, ou 
+                até pior: realizar a entrega sem qualidade.
+
+                Realizar entregas contínuas de pequenos lotes de trabalho - Realizar entregas contínuas de pequenos lotes de trabalho, tornando implantações complexas em 
+                atividades simples, tranquilas e com alta qualidade.
+            
+        Pipeline de implantação
+
+            Pipeline de implantação é o processo de automação do fluxo de valor que leva o software do controle de versão até o ambiente de produção, passando pela integração 
+            contínua. Seu objetivo principal é fornecer feedback rápido a todos no fluxo de valor sobre o status das mudanças (principalmente para a equipe Dev). Por isso, 
+            colabora com a correção imediata quando algum problema ocorre.
